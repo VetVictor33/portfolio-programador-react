@@ -14,7 +14,8 @@
   --primary-ff: 'Playfair Display';
   --secondary-ff: 'Maven Pro';
 
-  --profile-img: url(' ./src/assets/perfil2.jpg')
+  --profile-img: url(' ./src/assets/perfil2.jpg');
+  --projects-img: url('./src/assets/icons/project.png')
 }
 
 html {

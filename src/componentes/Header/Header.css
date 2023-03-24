@@ -33,27 +33,28 @@
 
 .Header li {
     font-size: 18px;
+    letter-spacing: 1px;
 }
 
 @media (min-width:400px) {
-    .header {
+    .Header {
         width: 100%;
 
         margin: 0;
     }
 
-    .header li {
+    .Header li {
         font-size: 22px;
     }
 }
 
 @media (min-width: 1200px) {
-    .header {
+    .Header {
         justify-content: space-between;
 
     }
 
-    .header-navbar ul {
+    .Header-navbar ul {
         justify-content: space-between;
         width: 100%
     }
