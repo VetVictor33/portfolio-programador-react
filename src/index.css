@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: aliceblue;
+}
+
+:root {
+  --primary-color: #301860;
+  --secondary-color: #001848;
+  --terciary-color: #906090;
+
+  --primary-ff: 'Playfair Display';
+  --secondary-ff: 'Maven Pro';
+
+  --profile-img: url(' ./src/assets/perfil2.jpg')
+}
+
+html {
+  background-image: linear-gradient(to bottom right, var(--secondary-color), var(--primary-color));
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+li,
+a {
+  font-family: var(--primary-ff);
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  font-family: var(--secondary-ff);
+}
+
+a {
+  text-decoration: none;
+  color: none;
+}
+
+a:hover {
+  color: var(--terciary-color);
+  font-weight: bold;
+}
