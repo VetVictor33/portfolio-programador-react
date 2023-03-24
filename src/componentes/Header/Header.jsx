@@ -5,7 +5,7 @@ export default function Header() {
     return (
         <header className="Header">
             <img src={ProgrammerIcon} alt="ícone programador" />
-            <nav class="header-navbar">
+            <nav className="header-navbar">
                 <ul>
                     <li><a href="./index.html">Apresentação</a></li>
                     <li><a href="./pages/about/index.html">Sobre</a></li>

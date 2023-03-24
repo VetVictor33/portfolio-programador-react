@@ -1,6 +1,7 @@
 import './Projects.css'
+import { projectsMock } from '../../mock'
+import ProjectCard from '../ProjectCard/ProjectCard'
 
-const porjectsMock = []
 
 export default function Projects() {
     return (
@@ -15,6 +16,11 @@ export default function Projects() {
                 </p>
             </article>
             <div className="projects-cards">
+                {projectsMock.map((project) => {
+                    return (
+                        <ProjectCard key={project.id} value={project} />
+                    )
+                })}
             </div>
         </section>
     )
