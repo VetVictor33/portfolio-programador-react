@@ -1,0 +1,17 @@
+.ErrorPage {
+    height: 90vh;
+    width: 100%;
+    margin: auto 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ErrorPage #link {
+    cursor: pointer;
+    text-decoration: underline;
+}

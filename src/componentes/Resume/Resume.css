@@ -1,0 +1,79 @@
+.Resume {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.Resume .main-title {
+    margin-bottom: 10px;
+}
+
+.Resume .text-description {
+    margin: 10px 0;
+    padding: 0 2vw;
+    font-size: 18px;
+    letter-spacing: 5px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.Resume .icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.Resume .icon-glass {
+    background-image: var(--resume-main-img);
+}
+
+.Resume .icon1 {
+    background-image: var(--resume-second-img);
+}
+
+.Resume .icon2 {
+    background-image: var(--resume-third-img);
+}
+
+.Resume .icon3 {
+    background-image: var(--resume-forth-img);
+}
+
+.Resume .about-img {
+    display: none;
+}
+
+.Resume .title-icon {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1200px) {
+
+    .Resume .text-with-icon img {
+        display: block;
+    }
+
+    .Resume p.text-description.course-description {
+        width: 80%;
+    }
+
+    .Resume .text-with-icon .text-description {
+        width: 100%;
+    }
+
+    .Resume .text-with-icon img {
+        height: auto;
+        width: 300px;
+        float: right;
+    }
+
+    .Resume .about-img {
+        display: block;
+        height: 100%;
+    }
+
+    .Resume .course-name {
+        margin-right: 0
+    }
+}

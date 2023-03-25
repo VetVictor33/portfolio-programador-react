@@ -12,7 +12,6 @@ import Home from './componentes/Home/Home'
 
 const router = createBrowserRouter([
   {
-    path: '/',
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
