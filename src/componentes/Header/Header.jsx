@@ -1,6 +1,7 @@
 import './Header.css';
 import ProgrammerIcon from '../../assets/icons/header-icon.png';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     useEffect(() => {
@@ -27,9 +28,15 @@ export default function Header() {
             <img src={ProgrammerIcon} alt="ícone programador" />
             <nav className="header-navbar">
                 <ul>
-                    <li><a href="./index.html">Apresentação</a></li>
-                    <li><a href="./pages/about/index.html">Sobre</a></li>
-                    <li><a href="./pages/contact/index.html">Contato</a></li>
+                    <li>
+                        <Link to={`/`}>Apresentação</Link>
+                    </li>
+                    <li>
+                        <Link to={`/about`}>Sobre</Link>
+                    </li>
+                    <li>
+                        <Link to={`/contact`}>Contato</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
