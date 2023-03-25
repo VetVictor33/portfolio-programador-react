@@ -9,6 +9,8 @@ import './index.css'
 import ErrorPage from './componentes/ErrorPage/ErrorPage';
 import About from './componentes/About/About';
 import Home from './componentes/Home/Home'
+import ProjectPage from './componentes/ProjectPage/ProjectPage';
+import { projectsMock } from './mock';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/project/:project',
+        element: <ProjectPage />
       }
     ]
   }
