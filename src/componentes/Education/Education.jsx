@@ -32,11 +32,13 @@ export default function Education() {
                     <div className="icon complementary-icon"></div>
                     <h2 className="main-title smaller-title">Cursos Complementares</h2>
                 </div>
-                {compEduMock.map((compEdu) => {
-                    return (
-                        <CompEdu key={compEdu.id} props={compEdu} />
-                    )
-                })}
+                <div className="CompEdu">
+                    {compEduMock.map((compEdu) => {
+                        return (
+                            <CompEdu key={compEdu.id} props={compEdu} />
+                        )
+                    })}
+                </div>
             </section>
         </div>
     )
