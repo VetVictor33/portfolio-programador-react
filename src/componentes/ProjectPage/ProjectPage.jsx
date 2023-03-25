@@ -13,12 +13,12 @@ export default function ProjectPage() {
     return (
         <div className='ProjectPage'>
             <img src={`.${project.imgSrc}`} alt="projeto" />
-            <p>{project.title}</p>
-            <p>{project.description}</p>
-            <div>
-                <Link className='bt' to={`/project/${preveiusProject}`}>Anterior</Link>
-                <Link className='bt' to={`/project/${nextProject}`}>Proximo</Link>
+            <div className='bts'>
+                <Link className='bt bt-left' to={`/project/${preveiusProject}`}></Link>
+                <Link className='bt bt-right' to={`/project/${nextProject}`}></Link>
             </div>
+            <p className='main-title'>{project.title}</p>
+            <p className='text-description'>{project.description}</p>
         </div>
     )
 }
