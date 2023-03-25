@@ -15,9 +15,9 @@
     background-size: cover;
 }
 
-.ProjectCard .card-img:hover {
-    border: solid 3px #906090;
+.ProjectCard h2:hover {
     cursor: pointer;
+    color: var(--terciary-color)
 }
 
 .ProjectCard h2 {

@@ -25,6 +25,8 @@
 
   --education-primary-icon: url('./src/assets/icons/scholarship.png');
   --education-complementary-icon: url('./src/assets/icons/puzzle.png');
+
+  --arrow: url('../src/assets/icons/right-arrow.svg');
 }
 
 html {

@@ -3,7 +3,13 @@
 }
 
 .ProjectPage img {
-    height: 400px;
+    max-height: 60vh;
+    max-width: 80vw;
+}
+
+.ProjectPage img:hover {
+    border: solid 3px #906090;
+    cursor: pointer;
 }
 
 .ProjectPage p {
@@ -25,10 +31,10 @@
 }
 
 .ProjectPage .bt-right {
-    background-image: url(../../assets/icons/right-arrow.svg);
+    background-image: var(--arrow);
 }
 
 .ProjectPage .bt-left {
-    background-image: url(../../assets/icons/right-arrow.svg);
+    background-image: var(--arrow);
     transform: rotate(180deg);
 }
