@@ -43,11 +43,6 @@
     display: none;
 }
 
-.Resume .title-icon {
-    display: flex;
-    align-items: center;
-}
-
 @media (min-width: 1200px) {
 
     .Resume .text-with-icon img {
@@ -71,9 +66,5 @@
     .Resume .about-img {
         display: block;
         height: 100%;
-    }
-
-    .Resume .course-name {
-        margin-right: 0
     }
 }

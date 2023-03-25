@@ -1,0 +1,65 @@
+.Education .primary-educaton {
+    border-top: double 0.5vh var(--terciary-color);
+}
+
+.Education .education-icon {
+    background-image: var(--education-primary-icon);
+}
+
+.Education .education p {
+    letter-spacing: normal;
+}
+
+.Education .title-icon {
+    display: flex;
+    align-items: center;
+}
+
+.Education .complementary-icon {
+    background-image: var(--education-complementary-icon);
+}
+
+.Education .smaller-title {
+    font-size: 1.5rem;
+}
+
+
+.Education .medium-title {
+    font-size: 2rem;
+}
+
+
+.Education .course {
+    padding: 15px 0;
+}
+
+.Education .course-name {
+    font-size: 1.6rem;
+    text-align: left;
+    background-color: var(--text-bg-color);
+}
+
+.Education .course-date {
+    font-size: 0.8rem;
+    text-align: left;
+    font-weight: bolder;
+    color: rgb(97, 96, 96)
+}
+
+.Education .course-description {
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+}
+
+
+.Education article :last-child {
+    border-bottom: aliceblue 1px solid;
+}
+
+@media (min-width: 1200px) {
+
+    .Education .course-name {
+        margin-right: 0
+    }
+}

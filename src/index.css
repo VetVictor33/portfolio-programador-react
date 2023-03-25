@@ -10,6 +10,7 @@
   --primary-color: #301860;
   --secondary-color: #001848;
   --terciary-color: #906090;
+  --text-bg-color: #9060901a;
 
   --primary-ff: 'Playfair Display';
   --secondary-ff: 'Maven Pro';
@@ -21,6 +22,9 @@
   --resume-second-img: url('./src/assets/icons/html-5.png');
   --resume-third-img: url('./src/assets/icons/css-3.png');
   --resume-forth-img: url('./src/assets/icons/js.png');
+
+  --education-primary-icon: url('./src/assets/icons/scholarship.png');
+  --education-complementary-icon: url('./src/assets/icons/puzzle.png');
 }
 
 html {
@@ -64,4 +68,28 @@ a:hover {
 
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.main-title {
+  margin-top: 30px;
+
+  font-size: 44px;
+  letter-spacing: 6px;
+}
+
+.text-description {
+  width: 100%;
+
+  font-size: 23px;
+  letter-spacing: 3px;
+  line-height: 30px;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 0 5vw;
+    width: 90vw;
+    margin: 0 auto;
+  }
 }
