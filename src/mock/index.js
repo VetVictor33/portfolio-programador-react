@@ -55,3 +55,30 @@ export const projectsMock = [
         link: "https://github.com/VetVictor33/skillshare-gourmet-burger"
     }
 ]
+
+export const compEduMock = [
+    {
+        id: 1,
+        title: "Python para Data Science(Alura)",
+        date: "2021",
+        description: "Princípios de Dada Science e Python com uso de Anaconda e Júpiter. Introdução à análise de dados"
+    },
+    {
+        id: 2,
+        title: "Programação em Android básica pts1, 2 e 3(Alura)",
+        date: "2021",
+        description: "Princípios da programação mobile com uso de Java e Android Studio"
+    },
+    {
+        id: 3,
+        title: "Java e Orientação a Objetos(Alura)",
+        date: "2021",
+        description: "Princípios da orientação a objetos e bases de Java com uso de Eclipse IDE"
+    },
+    {
+        id: 4,
+        title: "Iniciante em Programação(Alura)",
+        date: "2021",
+        description: "Princípios da lógica de programação, introdução a HTML, CSS e JavaScript"
+    }
+]

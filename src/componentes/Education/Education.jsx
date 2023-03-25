@@ -1,3 +1,5 @@
+import { compEduMock } from '../../mock'
+import CompEdu from '../CompEdu/CompEdu'
 import './Education.css'
 
 export default function Education() {
@@ -30,6 +32,11 @@ export default function Education() {
                     <div className="icon complementary-icon"></div>
                     <h2 className="main-title smaller-title">Cursos Complementares</h2>
                 </div>
+                {compEduMock.map((compEdu) => {
+                    return (
+                        <CompEdu key={compEdu.id} props={compEdu} />
+                    )
+                })}
             </section>
         </div>
     )
