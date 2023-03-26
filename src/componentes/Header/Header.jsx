@@ -1,7 +1,9 @@
 import './Header.css';
 import ProgrammerIcon from '../../assets/icons/header-icon.png';
 import { useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Menu from '../../assets/icons/menu.svg'
 
 export default function Header() {
     useEffect(() => {
@@ -23,11 +25,29 @@ export default function Header() {
         };
     }, []);
 
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setShowMenu(() => {
+            const menu = document.querySelector('.menu');
+            const links = document.querySelector('.Header ul')
+            menu.addEventListener('click', () => {
+                links.classList.remove('hidden')
+            })
+            links.addEventListener('mouseleave', () => {
+                links.classList.add('hidden')
+            })
+        });
+    };
+
     return (
         <header className="Header">
-            <img src={ProgrammerIcon} alt="ícone programador" />
+            <Link to={`/`}>
+                <img src={ProgrammerIcon} alt="ícone programador" style={{ cursor: 'pointer' }} />
+            </Link>
             <nav className="header-navbar">
-                <ul>
+                <img className='menu' src={Menu} style={{ cursor: 'pointer' }} onClick={toggleMenu} />
+                <ul className='hidden'>
                     <li>
                         <Link to={`/`}>Apresentação</Link>
                     </li>

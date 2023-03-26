@@ -4,7 +4,7 @@
 
 .ProjectPage img {
     max-height: 60vh;
-    max-width: 80vw;
+    max-width: 50vw;
 }
 
 .ProjectPage img:hover {
@@ -17,17 +17,17 @@
 }
 
 .ProjectPage .bts {
-    position: sticky;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
-    justify-content: space-between;
 }
 
 .ProjectPage .bt {
     background-repeat: no-repeat;
     background-size: cover;
-    width: 150px;
-    height: 150px;
+    width: 50px;
+    height: 50px;
 }
 
 .ProjectPage .bt-right {

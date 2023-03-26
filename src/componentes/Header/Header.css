@@ -1,12 +1,13 @@
 .Header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     height: 10vh;
     width: 100%;
 
     margin: auto;
+    padding: 0 2rem;
 
     position: sticky;
     top: 0;
@@ -21,12 +22,25 @@
     margin: 10px;
 }
 
-.Header ul {
-    display: flex;
-    justify-content: center;
+.Header nav {
+    position: relative;
+}
 
-    gap: 3vw;
-    padding-right: 1vw;
+.Header .menu {
+    margin-right: 60px;
+}
+
+.Header ul {
+    position: absolute;
+    right: 0;
+    top: 10;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    border: solid rgba(255, 255, 255, 0.205) 1px;
+
 
     list-style: none;
 }
@@ -34,6 +48,10 @@
 .Header li {
     font-size: 18px;
     letter-spacing: 1px;
+}
+
+.Header .hidden {
+    display: none;
 }
 
 @media (min-width:400px) {
@@ -54,9 +72,19 @@
 
     }
 
-    .Header-navbar ul {
+    .Header ul {
+        display: flex !important;
+        position: relative;
+        flex-direction: row;
         justify-content: space-between;
-        width: 100%
+        gap: 3vw;
+        padding-right: 1vw;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .Header .menu {
+        display: none;
     }
 
     * li {
