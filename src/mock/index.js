@@ -1,4 +1,4 @@
-export const projectsMock = [
+const unaProjectsMock = [
     {
         id: 1,
         imgSrc: "./src/assets/projects/curriculo-web.png",
@@ -56,7 +56,7 @@ export const projectsMock = [
     }
 ]
 
-export const compEduMock = [
+const unaCompEduMock = [
     {
         id: 1,
         title: "Python para Data Science(Alura)",
@@ -107,3 +107,6 @@ export const compEduMock = [
     },
 
 ]
+
+export const projectsMock = unaProjectsMock.reverse();
+export const compEduMock = unaCompEduMock.reverse();

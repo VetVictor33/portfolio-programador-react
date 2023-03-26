@@ -31,10 +31,19 @@
 }
 
 .Header ul {
+    display: none;
     position: absolute;
-    right: 0;
-    top: 10;
+    top: 0;
+}
+
+.Header li {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.Header .shown {
     display: flex;
+    right: 0;
     flex-direction: column;
     background-color: var(--primary-color);
     padding: 10px;
@@ -43,15 +52,8 @@
 
 
     list-style: none;
-}
-
-.Header li {
-    font-size: 18px;
-    letter-spacing: 1px;
-}
-
-.Header .hidden {
-    display: none;
+    top: 0;
+    transition: top 0.5s ease-in-out;
 }
 
 @media (min-width:400px) {

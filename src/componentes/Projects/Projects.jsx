@@ -16,7 +16,7 @@ export default function Projects() {
                 </p>
             </article>
             <div className="projects-cards">
-                {projectsMock.reverse().map((project) => {
+                {projectsMock.map((project) => {
                     return (
                         <ProjectCard key={project.id} value={project} />
                     )

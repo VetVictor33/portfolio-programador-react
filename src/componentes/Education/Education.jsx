@@ -33,7 +33,7 @@ export default function Education() {
                     <h2 className="main-title smaller-title">Cursos Complementares</h2>
                 </div>
                 <div className="CompEdu">
-                    {compEduMock.reverse().map((compEdu) => {
+                    {compEduMock.map((compEdu) => {
                         return (
                             <CompEdu key={compEdu.id} props={compEdu} />
                         )
