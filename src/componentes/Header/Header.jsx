@@ -17,7 +17,6 @@ export default function Header() {
         const handeScroll = () => {
             if (window.scrollY > 0) {
                 header.style.backgroundImage = 'linear-gradient(to bottom right, #001848, #301860)';
-                //header.style.borderBottom = 'none';
             } else {
                 header.style.backgroundImage = 'none';
                 header.style.borderBottom = headerBborder;
