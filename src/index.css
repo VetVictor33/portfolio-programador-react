@@ -90,7 +90,6 @@ a:hover {
 
 @media (min-width: 1200px) {
   body {
-    padding: 0 5vw;
     width: 90vw;
     margin: 0 auto;
   }
