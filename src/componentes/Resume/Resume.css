@@ -24,19 +24,13 @@
 }
 
 .Resume .icon-glass {
-    background-image: var(--resume-main-img);
+    width: 10rem;
+    height: 10rem;
 }
 
-.Resume .icon1 {
-    background-image: var(--resume-second-img);
-}
-
-.Resume .icon2 {
-    background-image: var(--resume-third-img);
-}
-
-.Resume .icon3 {
-    background-image: var(--resume-forth-img);
+.Resume .icon-small {
+    width: 5rem;
+    height: 5rem;
 }
 
 .Resume .about-img {

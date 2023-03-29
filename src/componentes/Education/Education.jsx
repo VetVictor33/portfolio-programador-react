@@ -1,13 +1,15 @@
 import { compEduMock } from '../../mock'
-import CompEdu from '../CompEdu/CompEdu'
 import './Education.css'
+import CompEdu from '../CompEdu/CompEdu'
+import PrimaryEdu from '../../assets/icons/scholarship.png'
+import ComplEdu from '../../assets/icons/puzzle.png'
 
 export default function Education() {
     return (
         <div className="Education">
             <section className="primary-educaton">
                 <div className="title-icon">
-                    <div className="icon education-icon"></div>
+                    <img className="icon education-icon" src={PrimaryEdu} />
                     <h2 className="main-title medium-title">Educação</h2>
                 </div>
                 <article className="course">
@@ -29,7 +31,7 @@ export default function Education() {
             </section>
             <section className="complementary education">
                 <div className="title-icon">
-                    <div className="icon complementary-icon"></div>
+                    <img className="icon education-icon" src={ComplEdu} />
                     <h2 className="main-title smaller-title">Cursos Complementares</h2>
                 </div>
                 <div className="CompEdu">

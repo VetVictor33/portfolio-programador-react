@@ -1,5 +1,6 @@
 .ProjectPage {
     padding: 1rem;
+    min-height: 80vh;
 }
 
 .ProjectPage img {
@@ -37,4 +38,22 @@
 .ProjectPage .bt-left {
     background-image: var(--arrow);
     transform: rotate(180deg);
+}
+
+.ProjectPage .mobile {
+    background-color: var(--secondary-color);
+    padding: 50px 0;
+    margin-top: 5%;
+    border-radius: 18px;
+}
+
+.ProjectPage .mobile h2 {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.ProjectPage .mobile img {
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: 10px 10px 20px 10px var(--primary-color);
 }

@@ -3,7 +3,8 @@
 }
 
 .Education .education-icon {
-    background-image: var(--education-primary-icon);
+    width: 5rem;
+    height: 5rem;
 }
 
 .Education .education p {
@@ -13,10 +14,6 @@
 .Education .title-icon {
     display: flex;
     align-items: center;
-}
-
-.Education .complementary-icon {
-    background-image: var(--education-complementary-icon);
 }
 
 .Education .complementary {

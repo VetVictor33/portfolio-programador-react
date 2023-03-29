@@ -1,18 +1,20 @@
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom';
-import { projectsMock } from '../../mock';
+import { projectsMock, getMobileSrc } from '../../mock';
 import './ProjectPage.css'
 
 export default function ProjectPage() {
 
     const projectId = useParams();
     const projectIndex = projectId.projectId;
-    let project = projectsMock.filter(project => project.id == projectIndex);
-    project = project[0];
+    const project = projectsMock.find((project) => project.id == projectIndex)
 
+    const hasMobile = project.mobile;
+    const mobileSrc = getMobileSrc(project.id);
 
     const preveiusProject = project.id >= (projectsMock.length) ? 1 : (project.id) + 1;
     const nextProject = project.id > 1 ? (project.id) - 1 : projectsMock.length;
+
     return (
         <div className='ProjectPage'>
             <div className='bts'>
@@ -24,6 +26,13 @@ export default function ProjectPage() {
             </div>
             <p className='main-title'>{project.title}</p>
             <p className='text-description'>{project.description}</p>
+            {hasMobile &&
+                <div className='mobile'>
+                    <h2>Esse projeto também foi pensado para mobile!</h2>
+                    <h2> Dá uma olhada em como ficou: </h2>
+                    <img src={`.${mobileSrc}`} alt="" />
+                </div>
+            }
         </div>
     )
 }

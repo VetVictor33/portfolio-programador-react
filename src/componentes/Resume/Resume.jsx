@@ -1,11 +1,15 @@
 import './Resume.css'
 import TextImg from '../../assets/icons/coding.png'
+import Search from '../../assets/icons/search.png'
+import Html from '../../assets/icons/html-5.png'
+import Css from '../../assets/icons/css-3.png'
+import Js from '../../assets/icons/js.png'
 
 export default function Resume() {
     return (
         <section className="Resume">
             <h1 className="main-title">Quem sou eu</h1>
-            <div className="icons icon icon-glass"></div>
+            <img className="icons icon icon-glass" src={Search} />
             <p className="text-description">Apaixonado por literatura, política e ciência. Adoro uma boa
                 conversa
                 com
@@ -14,9 +18,9 @@ export default function Resume() {
                 saber falar todas as línguas. </p>
 
             <div className="icons">
-                <div className="icon icon1"></div>
-                <div className="icon icon2"></div>
-                <div className="icon icon3"></div>
+                <img className="icon icon-small" src={Html} />
+                <img className="icon icon-small" src={Css} />
+                <img className="icon icon-small" src={Js} />
             </div>
             <div className="text-with-icon">
                 <div className="about-img"><img src={TextImg} alt="" /></div>

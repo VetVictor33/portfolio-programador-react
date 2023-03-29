@@ -5,8 +5,13 @@ export default function ProjectCard(prop) {
     const { id, imgSrc, title } = prop.value;
     return (
         <div className='ProjectCard'>
-            <div className='card-img' style={{ backgroundImage: `url('${imgSrc}')` }}></div>
-            <Link to={`/project/${id}`}><h2>{title}</h2></Link>
+            <div>
+
+                <Link to={`/project/${id}`}>
+                    <img className='card-img' src={imgSrc} />
+                    <h2>{title}</h2>
+                </Link>
+            </div>
         </div>
     )
 }
