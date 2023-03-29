@@ -7,12 +7,8 @@
 }
 
 .Projects .projects-img {
-    background-image: var(--projects-img);
     height: 10rem;
     width: 10rem;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .Projects .projetcs-introduction {

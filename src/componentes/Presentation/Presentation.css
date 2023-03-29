@@ -44,27 +44,27 @@
     text-transform: uppercase;
 }
 
-.presentation-img img {
-    max-width: auto;
-    max-height: 350px;
-    border-radius: 100px 5px;
+.Presentation .presentation-img {
+    display: none;
 }
+
+
 
 @media (min-width:900px) {
 
-    .presentation-img {
-        background-image: var(--profile-img);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .Presentation article {
+        flex: 2;
+    }
 
-        height: 250px;
-        width: 250px;
+    .Presentation .presentation-img {
+        display: flex;
+        flex: 1
+    }
 
-
-        margin-right: 5%;
-
+    .Presentation .presentation-img img {
+        width: 100%;
         border-radius: 50%;
-        border: solid var(--terciary-color) 3px;
+        background-image: linear-gradient(to bottom right, var(--terciary-color), var(--secondary-color));
+        padding: 10px;
     }
 }

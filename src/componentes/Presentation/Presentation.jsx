@@ -1,4 +1,5 @@
 import './Presentation.css'
+import Profile from './../../assets/perfil3.jpg'
 
 export default function Presentation() {
     return (
@@ -9,6 +10,7 @@ export default function Presentation() {
                 <p>enxergando o mundo pelo código fonte</p>
             </article>
             <div className="presentation-img">
+                <img src={Profile} alt="" />
             </div>
         </section>
     )
