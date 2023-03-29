@@ -1,68 +1,62 @@
-import './Header.css';
-import ProgrammerIcon from '../../assets/icons/header-icon.png';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Menu from '../../assets/icons/menu.svg'
+import { animateScroll } from 'react-scroll';
+import ProgrammerIcon from '../../assets/icons/header-icon.png';
+import Menu from '../../assets/icons/menu.svg';
+import './Header.css';
 
 export default function Header() {
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight,
     });
+
+    const headerRef = useRef(null);
+    const linksRef = useRef(null);
+
     useEffect(() => {
-        const header = document.querySelector('.Header');
-        const headerBborder = header.style.borderBottom;
-        const menu = document.querySelector('.menu');
-        const links = document.querySelector('.Header ul');
         const handeScroll = () => {
             if (window.scrollY > 0) {
-                header.style.backgroundImage = 'linear-gradient(to bottom right, #001848, #301860)';
+                headerRef.current.style.backgroundImage = 'linear-gradient(to bottom right, #001848, #301860)';
             } else {
-                header.style.backgroundImage = 'none';
-                header.style.borderBottom = headerBborder;
+                headerRef.current.style.backgroundImage = 'none';
             }
         }
-        const handleClick = () => {
-            links.classList.toggle('shown');
-        }
-        const handleClickLinks = () => {
-            links.classList.remove('shown');
-            links.style.top = '0'
-        }
+
         const handleResize = () => {
             setWindowSize({
                 width: window.innerWidth,
                 height: window.innerHeight
             })
-            if (windowSize.width < 1200) {
-                links.classList.remove('shown');
-                links.style.top = '0'
-            }
+            if (windowSize.width < 1200) handleRemoveMenu()
         }
 
         window.addEventListener('scroll', handeScroll)
-        menu.addEventListener('click', handleClick);
-        links.addEventListener('click', handleClickLinks);
         window.addEventListener('resize', handleResize)
 
         return () => {
             window.removeEventListener('scroll', handeScroll);
-            menu.removeEventListener('click', handleClick);
-            links.removeEventListener('click', handleClickLinks);
             window.removeEventListener('resize', handleResize)
         };
-    });
+    }, []);
+
+    const handleToggleShown = () => linksRef.current.classList.toggle('shown')
+    const handleRemoveMenu = () => linksRef.current.classList.remove('shown');
+
+    const handleScrollToTop = () => {
+        animateScroll.scrollToTop()
+    }
 
 
 
     return (
-        <header className="Header">
-            <Link to={`/`}>
+        <header className="Header" ref={headerRef}>
+            <Link to={`/`} onClick={handleScrollToTop}>
                 <img src={ProgrammerIcon} alt="ícone programador" style={{ cursor: 'pointer' }} />
             </Link>
             <nav className="header-navbar">
-                <img className='menu' src={Menu} style={{ cursor: 'pointer' }} />
-                <ul>
+                <img className='menu' src={Menu} style={{ cursor: 'pointer' }} onClick={handleToggleShown} />
+                <ul onClick={handleRemoveMenu} ref={linksRef}>
                     <li>
                         <Link to={`/`}>Apresentação</Link>
                     </li>

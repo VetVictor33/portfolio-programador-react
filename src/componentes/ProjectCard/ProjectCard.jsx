@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import './ProjectCard.css'
 
-export default function ProjectCard(prop) {
-    const { id, imgSrc, title } = prop.value;
+export default function ProjectCard({ project }) {
+    const { id, imgSrc, title } = project;
     return (
         <div className='ProjectCard'>
             <div>

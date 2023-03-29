@@ -19,7 +19,7 @@ export default function Projects() {
             <div className="projects-cards">
                 {projectsMock.map((project) => {
                     return (
-                        <ProjectCard key={project.id} value={project} />
+                        <ProjectCard key={project.id} project={project} />
                     )
                 })}
             </div>

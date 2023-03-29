@@ -65,9 +65,24 @@
 
     .Presentation .presentation-img img {
         max-width: auto;
-        max-height: 50vh;
+        max-height: 20vh;
         border-radius: 50%;
         background-image: linear-gradient(to bottom right, var(--terciary-color), var(--secondary-color));
         padding: 10px;
+        margin-right: 20px;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .Presentation .presentation-img img {
+        max-height: 30vh;
+    }
+}
+
+@media (min-width:1600px) {
+
+    .Presentation .presentation-img img {
+        max-height: 40vh;
     }
 }
