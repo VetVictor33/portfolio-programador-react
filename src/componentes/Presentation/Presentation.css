@@ -4,6 +4,8 @@
     align-items: center;
 
     height: 65vh;
+    background-color: rgba(0, 0, 0, 0.616);
+    border-radius: 18px;
 }
 
 .preseentation-text {
@@ -62,7 +64,8 @@
     }
 
     .Presentation .presentation-img img {
-        width: 100%;
+        max-width: auto;
+        max-height: 50vh;
         border-radius: 50%;
         background-image: linear-gradient(to bottom right, var(--terciary-color), var(--secondary-color));
         padding: 10px;

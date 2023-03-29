@@ -94,6 +94,14 @@ const unaProjectsMock = [
         description: "Essa aplicação simula um site de reserva de hotéis ao redor do mundo. É possível criar um usuário e fazer reservas que ficarão salvos no banco de dados. Se o usuário for um admin, é possível cadastrar novos hotéis ou deletá-los, visualizar e deletar pedidos de usuários comuns. O backend foi criado utilizando o framework Express, diversos pacotes do node foram adicionados para implementar as funcionalidades do site, como o bcrypt para encryptar a senha dos usuários antes de salvar no banco de dados, que no caso foi o mongoDB, além do pacote express-validator para validação dos dados fornecidos pelo usuário.",
         link: "https://github.com/VetVictor33/skillshare-hotelpage-full-stack",
         mobile: true
+    },
+    {
+        id: 13,
+        imgSrc: "./src/assets/projects/portfolio-antigo.png",
+        title: "Portfólio Antigo",
+        description: "Este portfólio desenvolvido em vanila js. Há muita repetição de código HTML, porém o site cumpre o propósito de maneira aceitável. Procurei implementar o conceito de mobile first, por isso iniciei o design focado em dispositivos móveis.",
+        link: "https://github.com/VetVictor33/portfolio-programador",
+        mobile: true
     }
 ]
 
