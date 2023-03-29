@@ -1,18 +1,19 @@
 .Header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 
-    height: 10vh;
+    min-height: 10vh;
     width: 100%;
 
     margin: auto;
-    padding: 0 2rem;
+    padding: 2rem;
 
     position: sticky;
     top: 0;
 
     border-bottom: solid #906090 1px;
+
+    transition: height 0.5s ease-in-out;
 }
 
 .Header img {
@@ -23,38 +24,35 @@
 }
 
 .Header nav {
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .Header .menu {
-    margin-right: 60px;
+    align-self: flex-end;
+    margin-bottom: 0;
 }
 
 .Header ul {
     display: none;
-    position: absolute;
     top: 0;
 }
 
 .Header li {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .Header .shown {
     display: flex;
-    right: 0;
-    flex-direction: column;
-    background-color: var(--primary-color);
     padding: 10px;
     border-radius: 10px;
-    border: solid rgba(255, 255, 255, 0.205) 1px;
-
+    gap: 2%;
 
     list-style: none;
-    top: 0;
-    transition: top 0.5s ease-in-out;
+
+    margin-top: 0;
 }
 
 @media (min-width:400px) {
@@ -65,13 +63,26 @@
     }
 
     .Header li {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:600px) {
+    .Header li {
         font-size: 22px;
+    }
+}
+
+@media (min-width:1000px) {
+    .Header li {
+        font-size: 28px;
     }
 }
 
 @media (min-width: 1200px) {
     .Header {
         justify-content: space-between;
+        align-items: center;
 
     }
 

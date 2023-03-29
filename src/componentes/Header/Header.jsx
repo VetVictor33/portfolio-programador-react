@@ -24,10 +24,6 @@ export default function Header() {
         }
         const handleClick = () => {
             links.classList.toggle('shown');
-            const top = links.style.top != '40px' ? '40px' : '0px'
-            setTimeout(() => {
-                links.style.top = top
-            }, 100);
         }
         const handleClickLinks = () => {
             links.classList.remove('shown');
