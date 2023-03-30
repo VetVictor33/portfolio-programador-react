@@ -1,0 +1,90 @@
+.Contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 80vh;
+    padding: 1rem 0;
+}
+
+.Contact .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(240, 248, 255, 0.603);
+    width: 350px;
+    height: 450px;
+
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+
+    border-radius: 8px;
+    box-shadow: 1px 5px 6px 1px rgba(240, 248, 255, 0.301);
+}
+
+.Contact #profile {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    padding: 1px;
+    margin-top: 10%;
+
+    background-color: black;
+}
+
+.Contact .text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact .box p {
+    color: black;
+    margin: 0.5rem 0;
+    background-color: rgba(240, 248, 255, 0.603);
+    padding: 3px;
+    border-radius: 8px;
+
+    width: 65%;
+}
+
+
+.Contact #gmail {
+    width: 30px;
+    cursor: pointer;
+}
+
+.Contact .SocialNavbar {
+    background-color: rgba(240, 248, 255, 0.603);
+}
+
+.Contact .background {
+    background-color: rgba(0, 0, 0, 0.438);
+    padding: 6rem 0;
+    border-radius: 18px;
+}
+
+.Contact .SocialNavbar li {
+    color: black !important;
+}
+
+@media (min-width: 800px) {
+    .Contact .box {
+        width: 450px;
+        height: 450px;
+    }
+
+    .Contact #profile {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .Contact .box {
+        width: 600px;
+        height: 600px
+    }
+}

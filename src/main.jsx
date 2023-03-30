@@ -10,6 +10,7 @@ import ErrorPage from './componentes/ErrorPage/ErrorPage';
 import About from './componentes/About/About';
 import Home from './componentes/Home/Home'
 import ProjectPage from './componentes/ProjectPage/ProjectPage';
+import Contact from './componentes/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: '/project/:projectId',
         element: <ProjectPage />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       }
     ]
   }
