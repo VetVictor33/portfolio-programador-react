@@ -13,7 +13,7 @@ export default function ProjectCard({ project }) {
             <div>
 
                 <Link to={`/project/${id}`} onClick={handleScrollToTop}>
-                    <img className='card-img' src={imgSrc} />
+                    <img className='card-img' src={`${imgSrc}`} />
                     <h2>{title}</h2>
                 </Link>
             </div>

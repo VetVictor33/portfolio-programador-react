@@ -51,7 +51,7 @@ export default function Header() {
 
     return (
         <header className="Header" ref={headerRef}>
-            <Link to={`/`} onClick={handleScrollToTop} smooth={true}>
+            <Link to={`/`} onClick={handleScrollToTop}>
                 <img src={ProgrammerIcon} alt="ícone programador" style={{ cursor: 'pointer' }} />
             </Link>
             <nav className="header-navbar">
