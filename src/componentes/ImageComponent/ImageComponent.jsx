@@ -19,7 +19,6 @@ import PortfolioAntigoMobile from '../../assets/projects/portfolio-antigo-mobile
 
 
 export default function ImageComponent({ imgSrc }) {
-    let src;
     switch (imgSrc) {
         case 'curriculo-web':
             return <img className='card-img' src={CurriculoWeb} alt='Projeto' />
