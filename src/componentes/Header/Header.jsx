@@ -51,20 +51,20 @@ export default function Header() {
 
     return (
         <header className="Header" ref={headerRef}>
-            <Link to={`/`} onClick={handleScrollToTop}>
+            <Link to={`/`} onClick={handleScrollToTop} smooth={true}>
                 <img src={ProgrammerIcon} alt="ícone programador" style={{ cursor: 'pointer' }} />
             </Link>
             <nav className="header-navbar">
                 <img className='menu' src={Menu} style={{ cursor: 'pointer' }} onClick={handleToggleShown} />
                 <ul onClick={handleRemoveMenu} ref={linksRef}>
                     <li>
-                        <Link to={`/`}>Apresentação</Link>
+                        <Link to={`/`} onClick={handleScrollToTop}>Home</Link>
                     </li>
                     <li>
-                        <Link to={`/about`}>Sobre</Link>
+                        <Link to={`/about`} onClick={handleScrollToTop}>Sobre</Link>
                     </li>
                     <li>
-                        <Link to={`/contact`}>Contato</Link>
+                        <Link to={`/contact`} onClick={handleScrollToTop}>Contato</Link>
                     </li>
                 </ul>
             </nav>

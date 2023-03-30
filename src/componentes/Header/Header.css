@@ -47,7 +47,8 @@
     display: flex;
     padding: 10px;
     border-radius: 10px;
-    gap: 2%;
+    gap: 10%;
+    margin-right: 2rem;
 
     list-style: none;
 

@@ -19,7 +19,7 @@ export default function ProjectPage() {
         <div className='ProjectPage'>
             <div className='bts'>
                 <Link className='bt bt-left' to={`/project/${preveiusProject}`}></Link>
-                <a href={project.link} >
+                <a href={project.link} target="_blank">
                     <img src={`.${project.imgSrc}`} alt="projeto" />
                 </a>
                 <Link className='bt bt-right' to={`/project/${nextProject}`}></Link>
@@ -30,7 +30,9 @@ export default function ProjectPage() {
                 <div className='mobile'>
                     <h2>Esse projeto também foi pensado para mobile!</h2>
                     <h2> Dá uma olhada em como ficou: </h2>
-                    <img src={`.${mobileSrc}`} alt="" />
+                    <a href={project.link} target="_blank">
+                        <img src={`.${mobileSrc}`} alt="" />
+                    </a>
                 </div>
             }
         </div>

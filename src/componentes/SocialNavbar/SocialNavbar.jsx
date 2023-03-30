@@ -6,13 +6,13 @@ export default function SocialNavbar() {
     return (
         <nav className="SocialNavbar">
             <ul>
-                <a href="https://github.com/VetVictor33">
+                <a href="https://github.com/VetVictor33" target="_blank">
                     <li>
                         <img className="icon-link" src={GitHubImg} alt="GitHub icon" />
                         GitHub
                     </li>
                 </a>
-                <a href="https://www.linkedin.com/in/victorjfeliciano/">
+                <a href="https://www.linkedin.com/in/victorjfeliciano/" target="_blank">
                     <li>
                         <img className="icon-link" src={LinkedInImg} alt="LinkedIn icon" />
                         LinkedIn
