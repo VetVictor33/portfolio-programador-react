@@ -15,12 +15,13 @@ export default function ProjectPage() {
     const preveiusProject = project.id >= (projectsMock.length) ? 1 : (project.id) + 1;
     const nextProject = project.id > 1 ? (project.id) - 1 : projectsMock.length;
 
+
     return (
         <div className='ProjectPage'>
             <div className='bts'>
                 <Link className='bt bt-left' to={`/project/${preveiusProject}`}></Link>
                 <a href={project.link} target="_blank">
-                    <img src={`.${project.imgSrc}`} alt="projeto" />
+                    <img src={`.${project.imgSrc}`} alt="Porjeto" />
                 </a>
                 <Link className='bt bt-right' to={`/project/${nextProject}`}></Link>
             </div>
