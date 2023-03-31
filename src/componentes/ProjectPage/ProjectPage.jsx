@@ -6,9 +6,8 @@ import './ProjectPage.css'
 
 export default function ProjectPage() {
 
-    const projectId = useParams();
-    const projectIndex = projectId.projectId;
-    const project = projectsMock.find((project) => project.id == projectIndex)
+    const { projectId } = useParams();
+    const project = projectsMock.find((project) => project.id === +projectId)
 
     const hasMobile = project.mobile;
     const mobileSrc = getMobileSrc(project.id);

@@ -1,8 +1,15 @@
 import './SocialNavbar.css'
-import GitHubImg from '../../assets/icons/github.png'
-import LinkedInImg from '../../assets/icons/linkedin.png'
+import GitHubLight from '../../assets/icons/github-ffff.png'
+import GitHubDark from '../../assets/icons/github.png'
+import LinkedInLight from '../../assets/icons/linkedin-ffff.png'
+import LinkedInDark from '../../assets/icons/linkedin.png'
 
 export default function SocialNavbar() {
+    const { pathname } = window.location;
+
+    const GitHubImg = pathname === '/contact' ? GitHubDark : GitHubLight;
+    const LinkedInImg = pathname === '/contact' ? LinkedInDark : LinkedInLight;
+
     return (
         <nav className="SocialNavbar">
             <ul>
