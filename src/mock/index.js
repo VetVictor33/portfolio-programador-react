@@ -83,7 +83,7 @@ const unaProjectsMock = [
         id: 11,
         imgSrc: 'desafio-modulo3',
         title: 'Cubos Flix',
-        description: 'Desafio realizado para o curso de desenvolvimento fullstack da Cubos Academy no qual há o consumo de uma API de filmes.',
+        description: 'Desafio realizado para o twrceiro módulo do curso de desenvolvimento fullstack da Cubos Academy no qual há o consumo de uma API de filmes. Os elementos HTML são criados dinamicamente, após a conexão com a API atravésdo Axios, e adicionados do document. Outro ponto interessante deste projeto são os recursos de estilo, é possível fazer a troca entre tema claro e escuro, além disso os cards dos filmes deslizam para a lateral conforme o usuário muda a exibição do carrossel.',
         link: "https://github.com/VetVictor33/desafio-modulo3",
         mobile: false
     },
