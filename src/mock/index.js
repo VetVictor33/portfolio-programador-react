@@ -99,7 +99,7 @@ const unaProjectsMock = [
         id: 13,
         imgSrc: "portfolio-antigo",
         title: "Portfólio Antigo",
-        description: "Este portfólio desenvolvido em vanila js. Há muita repetição de código HTML, porém o site cumpre o propósito de maneira aceitável. Procurei implementar o conceito de mobile first, por isso iniciei o design focado em dispositivos móveis.",
+        description: "Este portfólio, só que desenvolvido em Vanilla JavaScript, e por isso há muita repetição de código HTML, porém o site cumpre o propósito de maneira aceitável. Procurei implementar o conceito de mobile first no CSS, então o design foi iniciado com foco em dispositivos móveis. Utilizei a manipulação da DOM para adicionar itens dinamicamente tendo como referência um array de objetos que simula um JSON coletado de uma API ou backend",
         link: "https://github.com/VetVictor33/portfolio-programador",
         mobile: true
     }
