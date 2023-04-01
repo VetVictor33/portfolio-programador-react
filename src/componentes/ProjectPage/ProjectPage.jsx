@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import ImageComponent from '../ImageComponent/ImageComponent';
 import './ProjectPage.css'
 import { getAllProjects, getMobileSrc } from '../../database/repository'
+import { animateScroll } from 'react-scroll';
 
 export default function ProjectPage() {
+
+    animateScroll.scrollToTop();
 
     const { projectId } = useParams();
     const projects = getAllProjects();
