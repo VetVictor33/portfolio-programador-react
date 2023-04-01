@@ -1,8 +1,8 @@
-import { compEduMock } from '../../mock'
 import './Education.css'
 import CompEdu from '../CompEdu/CompEdu'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
 import ComplEdu from '../../assets/icons/puzzle.png'
+import { getAllCompEdu } from '../../database/repository'
 
 export default function Education() {
     return (
@@ -35,7 +35,7 @@ export default function Education() {
                     <h2 className="main-title smaller-title">Cursos Complementares</h2>
                 </div>
                 <div className="CompEdu">
-                    {compEduMock.map((compEdu) => {
+                    {getAllCompEdu().map((compEdu) => {
                         return (
                             <CompEdu key={compEdu.id} props={compEdu} />
                         )

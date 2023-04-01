@@ -1,7 +1,7 @@
 import './Projects.css'
-import { projectsMock } from '../../mock'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import ProjectImg from './../../assets/icons/project.png'
+import { getAllProjects } from '../../database/repository'
 
 
 export default function Projects() {
@@ -17,7 +17,7 @@ export default function Projects() {
                 </p>
             </article>
             <div className="projects-cards">
-                {projectsMock.map((project) => {
+                {getAllProjects().map((project) => {
                     return (
                         <ProjectCard key={project.id} project={project} />
                     )
