@@ -16,49 +16,70 @@ import LetsTravel from '../../assets/projects/lets-travel.png'
 import LetsTravelMobile from '../../assets/projects/lets-travel-mobile.png'
 import PortfolioAntigo from '../../assets/projects/portfolio-antigo.png'
 import PortfolioAntigoMobile from '../../assets/projects/portfolio-antigo-mobile.png'
+import NoImageAvailable from '../../assets/no_image_available.svg'
 
 
 export default function ImageComponent({ imgSrc }) {
+    let src = undefined;
     switch (imgSrc) {
         case 'curriculo-web':
-            return <img className='card-img' src={CurriculoWeb} alt='Projeto' />
+            src = CurriculoWeb
+            break;
         case 'portfolio-escritor':
-            return <img className='card-img' src={PortfolioEscritor} alt='Projeto' />
+            src = PortfolioEscritor
+            break;
         case 'duolingo-clone':
-            return <img className='card-img' src={CloneDuolingo} alt='Projeto' />
+            src = CloneDuolingo
+            break;
         case 'desafio-portfolio':
-            return <img className='card-img' src={DesafioPortfolio} alt='Projeto' />
+            src = DesafioPortfolio
+            break;
         case 'form-signup':
-            return <img className='card-img' src={FormSignup} alt='Projeto' />
+            src = FormSignup
+            break;
         case 'form':
-            return <img className='card-img' src={Form} alt='Projeto' />
+            src = Form
+            break;
         case 'tech-store':
-            return <img className='card-img' src={TechStore} alt='Projeto' />
+            src = TechStore
+            break;
         case 'tech-store-mobile':
-            return <img className='card-img' src={TechStoreMobile} alt='Projeto' />
+            src = TechStoreMobile
+            break;
         case 'gourmet-burger':
-            return <img className='card-img' src={GourmetBurger} alt='Projeto' />
+            src = GourmetBurger
+            break;
         case 'gourmet-burger-mobile':
-            return <img className='card-img' src={GourmetBurgerMobile} alt='Projeto' />
+            src = GourmetBurgerMobile
+            break;
         case 'music-app':
-            return <img className='card-img' src={MusicApp} alt='Projeto' />
+            src = MusicApp
+            break;
         case 'music-app-mobile':
-            return <img className='card-img' src={MusicAppMobile} alt='Projeto' />
+            src = MusicAppMobile
+            break;
         case 'rick-morty':
-            return <img className='card-img' src={RickMorty} alt='Projeto' />
+            src = RickMorty
+            break;
         case 'desafio-modulo3':
-            return <img className='card-img' src={DesafioModulo3} alt='Projeto' />
+            src = DesafioModulo3
+            break;
         case 'lets-travel':
-            return <img className='card-img' src={LetsTravel} alt='Projeto' />
+            src = LetsTravel
+            break;
         case 'lets-travel-mobile':
-            return <img className='card-img' src={LetsTravelMobile} alt='Projeto' />
+            src = LetsTravelMobile
+            break;
         case 'portfolio-antigo':
-            return <img className='card-img' src={PortfolioAntigo} alt='Projeto' />
+            src = PortfolioAntigo
+            break;
         case 'portfolio-antigo-mobile':
-            return <img className='card-img' src={PortfolioAntigoMobile} alt='Projeto' />
+            src = PortfolioAntigoMobile
+            break
         default:
-            return <h2>Imagem ainda não disponível</h2>
+            src = NoImageAvailable
     }
 
+    return <img className='card-img' src={src} alt='Projeto' />
 
 }
