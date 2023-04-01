@@ -2,11 +2,11 @@
     display: flex;
     justify-content: space-between;
 
-    min-height: 10vh;
+    min-height: 1vh;
     width: 100%;
 
     margin: auto;
-    padding: 2rem;
+    padding: 0.5rem;
 
     position: sticky;
     top: 0;
@@ -68,12 +68,21 @@
 }
 
 @media (min-width:600px) {
+    .Header {
+        padding: 1.5rem;
+    }
+
     .Header li {
         font-size: 22px;
     }
 }
 
 @media (min-width:1000px) {
+    .Header {
+        min-height: 5vh;
+        padding: 2rem;
+    }
+
     .Header li {
         font-size: 28px;
     }
@@ -81,6 +90,7 @@
 
 @media (min-width: 1200px) {
     .Header {
+        min-height: 10vh;
         justify-content: space-between;
         align-items: center;
 

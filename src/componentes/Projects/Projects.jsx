@@ -14,7 +14,9 @@ export default function Projects() {
                 <p className="text-description">Esses são alguns dos projetos que desenvolvi para praticar meus
                     conhecimentos em programação.
                     Fiz questão de deixar os projetos mais simples, de quando iniciei o aprendizado, para enfatizar a
-                    <span className="texto-destaque">evolução</span>
+                    <span className="texto-destaque"> evolução</span>.
+                </p>
+                <p className="text-description"> A principais tecnologias são JavaScript, React, Node, HTML e CSS.
                 </p>
             </article>
             <div className="projects-cards">
