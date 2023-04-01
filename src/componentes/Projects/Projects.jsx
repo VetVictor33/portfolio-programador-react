@@ -3,6 +3,7 @@ import ProjectCard from '../ProjectCard/ProjectCard'
 import ProjectImg from './../../assets/icons/project.png'
 import { getAllProjects } from '../../database/repository'
 
+const projects = getAllProjects();
 
 export default function Projects() {
     return (
@@ -17,7 +18,7 @@ export default function Projects() {
                 </p>
             </article>
             <div className="projects-cards">
-                {getAllProjects().map((project) => {
+                {projects.map((project) => {
                     return (
                         <ProjectCard key={project.id} project={project} />
                     )

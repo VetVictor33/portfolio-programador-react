@@ -1,12 +1,14 @@
 import projects from './projects'
 import complementaryEducation from './complementaryEducation'
 
-export function getAllProjects() {
-    return projects.reverse()
+export const getAllProjects = () => {
+    const reversed = projects.reverse()
+    return reversed
 }
 
-export function getAllCompEdu() {
-    return complementaryEducation.reverse()
+export const getAllCompEdu = () => {
+    const reversed = complementaryEducation.reverse()
+    return reversed
 }
 
 export function getMobileSrc(id) {
