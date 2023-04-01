@@ -1,6 +1,6 @@
 import SocialNavbar from '../SocialNavbar/SocialNavbar'
 import './Contact.css'
-import ProfileImg from '../../assets/perfil2.jpg'
+import ProfileImg from '../../assets/perfil.jpg'
 import Gmail from '../../assets/icons/gmail.svg'
 
 export default function Contact() {

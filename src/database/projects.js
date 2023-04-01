@@ -10,7 +10,7 @@ const projects = [
     {
         id: 2,
         imgSrc: "portfolio-escritor",
-        title: "Portfólio de Escritor",
+        title: "Portfólio Escritor",
         description: "Utilizei HTML5, CSS3 e um pouco de JavaScript para apresentar alguns dos textos que produzi para um projeto pessoal relacionado à produção de crônicas e contos.",
         link: "https://github.com/VetVictor33/portfolio-escritor",
         mobile: false
@@ -18,7 +18,7 @@ const projects = [
     {
         id: 3,
         imgSrc: "duolingo-clone",
-        title: "Clone da home page do Duolingo",
+        title: "Clone Duolingo",
         description: "Uma forma que encontrei de treinar como seria atender a uma demanda de um designer ao reproduzir a página do site de ensino de idiomas. Ainda não adicionei responsividade, porém planejo fazê-lo no futuro.",
         link: "https://github.com/VetVictor33/clone-duolingo",
         mobile: false
@@ -34,7 +34,7 @@ const projects = [
     {
         id: 5,
         imgSrc: "form-signup",
-        title: "Formulário de inscrição",
+        title: "Form de inscrição",
         description: "Projeto passado como exercício de um curso no qual foi proposto o desenvolvimento de um formulário de inscrição em vestibular. Foi utilizado HTML, CSS e JavaScript para validar os dados.",
         link: "https://github.com/VetVictor33/formulario-inscricao",
         mobile: false
@@ -42,7 +42,7 @@ const projects = [
     {
         id: 6,
         imgSrc: "form",
-        title: "Formulário para Login",
+        title: "Form de Login",
         description: "Projeto passado como exercício de um curso no qual foi proposto o desenvolvimento do Front End de login e sign in de um site fictício com base em um layout do figma. Foi utilizado HTML, CSS e JavaScript para validar os dados e adicionar comportamento ao site.",
         link: "https://github.com/VetVictor33/desafio-02",
         mobile: false
@@ -98,7 +98,7 @@ const projects = [
     {
         id: 13,
         imgSrc: "portfolio-antigo",
-        title: "Portfólio Antigo",
+        title: "Portfólio Vanilla JS",
         description: "Este portfólio, só que desenvolvido em Vanilla JavaScript, e por isso há muita repetição de código HTML, porém o site cumpre o propósito de maneira aceitável. Procurei implementar o conceito de mobile first no CSS, então o design foi iniciado com foco em dispositivos móveis. Utilizei a manipulação da DOM para adicionar itens dinamicamente tendo como referência um array de objetos que simula um JSON coletado de uma API ou backend",
         link: "https://github.com/VetVictor33/portfolio-programador",
         mobile: true
