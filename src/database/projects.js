@@ -85,6 +85,7 @@ const projects = [
         title: 'Cubos Flix',
         description: 'Desafio realizado para o twrceiro módulo do curso de desenvolvimento fullstack da Cubos Academy no qual há o consumo de uma API de filmes. Os elementos HTML são criados dinamicamente, após a conexão com a API atravésdo Axios, e adicionados do document. Outro ponto interessante deste projeto são os recursos de estilo, é possível fazer a troca entre tema claro e escuro, além disso os cards dos filmes deslizam para a lateral conforme o usuário muda a exibição do carrossel.',
         link: "https://github.com/VetVictor33/desafio-modulo3",
+        deploy: 'https://vetvictor33.github.io/desafio-modulo3/',
         mobile: false
     },
     {
@@ -101,6 +102,7 @@ const projects = [
         title: "Portfólio Vanilla JS",
         description: "Este portfólio, só que desenvolvido em Vanilla JavaScript, e por isso há muita repetição de código HTML, porém o site cumpre o propósito de maneira aceitável. Procurei implementar o conceito de mobile first no CSS, então o design foi iniciado com foco em dispositivos móveis. Utilizei a manipulação da DOM para adicionar itens dinamicamente tendo como referência um array de objetos que simula um JSON coletado de uma API ou backend",
         link: "https://github.com/VetVictor33/portfolio-programador",
+        deploy: 'https://vetvictor33.github.io/portfolio-programador/',
         mobile: true
     }
 ]

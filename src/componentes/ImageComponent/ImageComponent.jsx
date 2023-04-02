@@ -18,6 +18,8 @@ import PortfolioAntigo from '../../assets/projects/portfolio-antigo.png'
 import PortfolioAntigoMobile from '../../assets/projects/portfolio-antigo-mobile.png'
 import NoImageAvailable from '../../assets/no_image_available.svg'
 
+import './ImageComponent.css'
+
 
 export default function ImageComponent({ imgSrc }) {
     let src = undefined;
@@ -80,6 +82,11 @@ export default function ImageComponent({ imgSrc }) {
             src = NoImageAvailable
     }
 
-    return <img className='card-img' src={src} alt='Projeto' />
+    return (
+        <div className='ImageComponent'>
+            <img className='card-img' src={src} alt='Projeto' />
+            <p className='tooltip'>GitHub</p>
+        </div>
+    )
 
 }

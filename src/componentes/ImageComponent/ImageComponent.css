@@ -1,0 +1,38 @@
+.ImageComponent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImageComponent .tooltip {
+    display: none;
+    position: absolute;
+
+    width: fit-content;
+    height: fit-content;
+
+    background-color: rgba(128, 128, 128, 0.8);
+
+    border-radius: 18px;
+    padding: 1rem;
+    pointer-events: none;
+}
+
+.ImageComponent .card-img:hover+.tooltip {
+    display: block;
+}
+
+.ImageComponent .tooltip:hover {
+    display: block;
+}
+
+.ImageComponent img {
+    max-height: 60vh;
+    max-width: 50vw;
+}
+
+.ImageComponent img:hover {
+    border: solid 3px #906090;
+    cursor: pointer;
+}

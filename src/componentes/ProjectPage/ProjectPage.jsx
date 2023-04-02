@@ -16,6 +16,8 @@ export default function ProjectPage() {
     const hasMobile = project.mobile;
     const mobileSrc = getMobileSrc(project.id);
 
+    const hasDebloy = project.deploy;
+
     const preveiusProject = project.id >= (projects.length) ? 1 : (project.id) + 1;
     const nextProject = project.id > 1 ? (project.id) - 1 : projects.length;
 
@@ -30,6 +32,7 @@ export default function ProjectPage() {
             </div>
             <p className='main-title'>{project.title}</p>
             <p className='text-description'>{project.description}</p>
+            {!!hasDebloy && <a href={hasDebloy} className='main-title' target='_blank'> Visitar o site </a>}
             {hasMobile &&
                 <div className='mobile'>
                     <h2>Esse projeto também foi pensado para mobile!</h2>
