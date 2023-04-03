@@ -17,6 +17,8 @@ import LetsTravelMobile from '../../assets/projects/lets-travel-mobile.png'
 import PortfolioAntigo from '../../assets/projects/portfolio-antigo.png'
 import PortfolioAntigoMobile from '../../assets/projects/portfolio-antigo-mobile.png'
 import NoImageAvailable from '../../assets/no_image_available.svg'
+import MatchingGame from '../../assets/projects/matching-game.png'
+import MatchingGameMobile from '../../assets/projects/matching-game-mobile.png'
 
 import './ImageComponent.css'
 
@@ -78,6 +80,12 @@ export default function ImageComponent({ imgSrc }) {
             break;
         case 'portfolio-antigo-mobile':
             src = PortfolioAntigoMobile
+            break
+        case 'matching-game':
+            src = MatchingGame
+            break
+        case 'matching-game-mobile':
+            src = MatchingGameMobile
             break
         default:
             src = NoImageAvailable
