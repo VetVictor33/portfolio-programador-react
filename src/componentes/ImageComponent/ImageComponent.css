@@ -28,10 +28,22 @@
 
 .ImageComponent img {
     max-height: 60vh;
-    max-width: 50vw;
+    max-width: 90vw;
 }
 
 .ImageComponent img:hover {
-    border: solid 3px #906090;
+    border: solid 1px #906090;
     cursor: pointer;
+}
+
+@media (min-width:700px) {
+    .ImageComponent img {
+        max-width: 80vw;
+    }
+}
+
+@media (min-width:1000px) {
+    .ImageComponent img {
+        max-width: 70vw;
+    }
 }

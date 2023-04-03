@@ -23,14 +23,14 @@ export default function ProjectPage() {
 
     return (
         <div className='ProjectPage'>
+            <a href={project.link} target="_blank">
+                <ImageComponent imgSrc={project.imgSrc} />
+            </a>
             <div className='bts'>
                 <Link className='bt bt-left' to={`/project/${preveiusProject}`}></Link>
-                <a href={project.link} target="_blank">
-                    <ImageComponent imgSrc={project.imgSrc} />
-                </a>
+                <p className='main-title'>{project.title}</p>
                 <Link className='bt bt-right' to={`/project/${nextProject}`}></Link>
             </div>
-            <p className='main-title'>{project.title}</p>
             <p className='text-description'>{project.description}</p>
             {!!hasDebloy && <a href={hasDebloy} className='main-title' target='_blank'> Visitar o site </a>}
             {hasMobile &&
