@@ -23,6 +23,7 @@ import './ImageComponent.css'
 
 export default function ImageComponent({ imgSrc }) {
     let src = undefined;
+    const pathname = window.location.pathname;
     switch (imgSrc) {
         case 'curriculo-web':
             src = CurriculoWeb
@@ -85,7 +86,7 @@ export default function ImageComponent({ imgSrc }) {
     return (
         <div className='ImageComponent'>
             <img className='card-img' src={src} alt='Projeto' />
-            <p className='tooltip'>GitHub</p>
+            {pathname !== '/' && <p className='tooltip'>GitHub</p>}
         </div>
     )
 

@@ -104,6 +104,15 @@ const projects = [
         link: "https://github.com/VetVictor33/portfolio-programador",
         deploy: 'https://vetvictor33.github.io/portfolio-programador/',
         mobile: true
+    },
+    {
+        id: 14,
+        imgSrc: "matching-game",
+        title: "Matching Game",
+        description: "Joguinho feito utilizando React como exercício da Cubos Academy. Foi excelente para praticar useState()!",
+        link: "https://github.com/VetVictor33/cubos-matching-game/blob/main/README.md",
+        deploy: "https://matching-game-idng.onrender.com/",
+        mobile: true
     }
 ]
 
