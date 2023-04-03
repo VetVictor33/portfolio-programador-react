@@ -38,7 +38,7 @@ export default function ProjectPage() {
                     <h2>Esse projeto também foi pensado para mobile!</h2>
                     <h2> Dá uma olhada em como ficou: </h2>
                     <a href={project.link} target="_blank">
-                        <ImageComponent imgSrc={mobileSrc} />
+                        <ImageComponent imgSrc={mobileSrc} mobile={true} />
                     </a>
                 </div>
             }
