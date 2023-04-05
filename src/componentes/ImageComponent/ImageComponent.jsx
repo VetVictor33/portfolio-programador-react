@@ -1,3 +1,4 @@
+import { getKeywords } from '../../database/repository';
 import { arrayImgs } from '../../imports';
 import './ImageComponent.css'
 

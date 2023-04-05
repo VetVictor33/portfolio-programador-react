@@ -17,3 +17,9 @@ export function getMobileSrc(id) {
     src += `-mobile`;
     return src
 }
+
+export function getKeywords(id) {
+    const project = getAllProjects().find(projects => projects.id === +id);
+    const keywords = project.keywords;
+    return keywords
+}

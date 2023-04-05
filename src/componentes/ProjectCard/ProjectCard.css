@@ -51,6 +51,20 @@
     border-radius: 5px;
 }
 
+.ProjectCard .card-keywords {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.ProjectCard .card-keyword {
+    font-size: 16px;
+    font-style: italic;
+    color: lightgreen;
+}
+
 @media (min-width: 650px) {
 
     .ProjectCard .projects-cards {
