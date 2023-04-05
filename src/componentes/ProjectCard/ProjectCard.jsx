@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom';
 import ImageComponent from '../ImageComponent/ImageComponent';
 import './ProjectCard.css'
+import { getKeywords } from '../../database/repository';
 
 export default function ProjectCard({ project }) {
-    const { id, imgSrc, title, keywords } = project;
+    const { id, imgSrc, title } = project;
+    const keywords = getKeywords(id);
     return (
         <div className='ProjectCard'>
             <div>

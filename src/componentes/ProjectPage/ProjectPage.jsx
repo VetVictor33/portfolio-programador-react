@@ -2,7 +2,7 @@ import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 import ImageComponent from '../ImageComponent/ImageComponent';
 import './ProjectPage.css'
-import { getAllProjects, getMobileSrc } from '../../database/repository'
+import { getAllProjects, getKeywords, getMobileSrc } from '../../database/repository'
 import { animateScroll } from 'react-scroll';
 
 export default function ProjectPage() {
@@ -18,6 +18,8 @@ export default function ProjectPage() {
 
     const hasDebloy = project.deploy;
 
+    const keywords = getKeywords(project.id)
+
     const preveiusProject = project.id >= (projects.length) ? 1 : (project.id) + 1;
     const nextProject = project.id > 1 ? (project.id) - 1 : projects.length;
 
@@ -32,7 +34,7 @@ export default function ProjectPage() {
                 <Link className='bt bt-right' to={`/project/${nextProject}`}></Link>
             </div>
             <div className='project-keywords'>
-                {project.keywords && project.keywords.map(keyword => {
+                {keywords && keywords.map(keyword => {
                     return (
                         <p className='project-keyword' key={`${keyword}-${project.id}`}>{keyword}</p>
                     )
