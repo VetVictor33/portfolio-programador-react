@@ -19,6 +19,7 @@ import PortfolioAntigoMobile from './assets/projects/portfolio-antigo-mobile.png
 import NoImageAvailable from './assets/no_image_available.svg'
 import MatchingGame from './assets/projects/matching-game.png'
 import MatchingGameMobile from './assets/projects/matching-game-mobile.png'
+import ApiRestAulas from './assets/projects/api-rest-aulas.png'
 
 export const arrayImgs = [
     CurriculoWeb,
@@ -35,5 +36,6 @@ export const arrayImgs = [
     LetsTravel, LetsTravelMobile,
     PortfolioAntigo, PortfolioAntigoMobile,
     NoImageAvailable,
-    MatchingGame, MatchingGameMobile
+    MatchingGame, MatchingGameMobile,
+    ApiRestAulas
 ]

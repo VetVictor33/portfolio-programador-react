@@ -113,6 +113,14 @@ const projects = [
         link: "https://github.com/VetVictor33/cubos-matching-game/blob/main/README.md",
         deploy: "https://matching-game-idng.onrender.com/",
         mobile: true
+    },
+    {
+        id: 15,
+        imgSrc: "api-rest-aulas",
+        title: "API Rest - Aulas",
+        description: "API criada como proposta de exercício na Cubos Academy. A aplicação manipula um banco de dados mockado que representa uma coleção de aulas e uma de professores. Apliquei o CRUD completo, utilizando os métodos POST, GET, PUT, PATCH e DELETE, além de validar os dados e devolver mensagens amigáveis. Mais detalhes e imagens no README do projeto no GitHub.",
+        link: "https://github.com/VetVictor33/API---Rest",
+        mobile: false
     }
 ]
 
