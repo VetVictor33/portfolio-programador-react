@@ -87,7 +87,7 @@ const projects = [
         description: "Projeto realizado durante a jornada fullstack da Samsung Ocean. Estoi foi meu primeiro contato com a biblioteca React.js e com o Express.js.",
         link: "https://github.com/VetVictor33/ocean-fullstack-express-react",
         mobile: false,
-        keywords: ["CSS", "JavaScript", "Node", "Express", "React.js"]
+        keywords: ["CSS", "JavaScript", "Node", "Express", "React", "MongoDB"]
     },
     {
         id: 11,
@@ -106,7 +106,7 @@ const projects = [
         description: "Essa aplicação simula um site de reserva de hotéis ao redor do mundo. É possível criar um usuário e fazer reservas que ficarão salvos no banco de dados. Se o usuário for um admin, é possível cadastrar novos hotéis ou deletá-los, visualizar e deletar pedidos de usuários comuns. O backend foi criado utilizando o framework Express, diversos pacotes do node foram adicionados para implementar as funcionalidades do site, como o bcrypt para encryptar a senha dos usuários antes de salvar no banco de dados, que no caso foi o mongoDB, além do pacote express-validator para validação dos dados fornecidos pelo usuário.",
         link: "https://github.com/VetVictor33/skillshare-hotelpage-full-stack",
         mobile: true,
-        keywords: ["CSS", "Pug", "JavaScript", "Node", "Express"]
+        keywords: ["CSS", "Pug", "JavaScript", "Node", "Express", "MongoDB", "Cloudinary"]
     },
     {
         id: 13,
