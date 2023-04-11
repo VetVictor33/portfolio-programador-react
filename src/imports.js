@@ -20,6 +20,8 @@ import NoImageAvailable from './assets/no_image_available.svg'
 import MatchingGame from './assets/projects/matching-game.png'
 import MatchingGameMobile from './assets/projects/matching-game-mobile.png'
 import ApiRestAulas from './assets/projects/api-rest-aulas.png'
+import ReactMusicPlayer from './assets/projects/react-music-player.png'
+import ReactMusicPlayerMobile from './assets/projects/react-music-player-mobile.png'
 
 export const arrayImgs = [
     CurriculoWeb,
@@ -37,5 +39,6 @@ export const arrayImgs = [
     PortfolioAntigo, PortfolioAntigoMobile,
     NoImageAvailable,
     MatchingGame, MatchingGameMobile,
-    ApiRestAulas
+    ApiRestAulas,
+    ReactMusicPlayer, ReactMusicPlayerMobile
 ]
