@@ -142,7 +142,7 @@ const projects = [
         id: 16,
         imgSrc: "react-music-player",
         title: "Music Player - React",
-        description: "Tocador de música fito como exercício proposto da Cubos Academy tendo como referência um arquivo figma. O maior desafio desse projeto foi combinar o uso de Hooks com a lógica de programação para alcançar os objetivos pretendidos.",
+        description: "Tocador de música feito como exercício proposto pela Cubos Academy tendo como referência um arquivo Figma. O maior desafio desse projeto foi combinar o uso de Hooks com a lógica de programação para alcançar os objetivos pretendidos.",
         link: "https://github.com/VetVictor33/music-player-react",
         deploy: "https://react-music-player-edv9.onrender.com/",
         mobile: true,

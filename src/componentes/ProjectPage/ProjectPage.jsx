@@ -44,8 +44,7 @@ export default function ProjectPage() {
             {!!hasDebloy && <a href={hasDebloy} className='main-title' target='_blank'> Visitar o site </a>}
             {hasMobile &&
                 <div className='mobile'>
-                    <h2>Esse projeto também foi pensado para mobile!</h2>
-                    <h2> Dá uma olhada em como ficou: </h2>
+                    <h2>Idealizado para mobile:</h2>
                     <a href={project.link} target="_blank">
                         <ImageComponent imgSrc={mobileSrc} mobile={true} />
                     </a>
