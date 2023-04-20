@@ -31,6 +31,11 @@
     transform: rotate(180deg);
 }
 
+.ProjectPage .main-title {
+    text-align: center;
+    font-size: 32px;
+}
+
 .ProjectPage .project-keywords {
     display: flex;
     flex-wrap: wrap;
@@ -68,6 +73,10 @@
         width: 40px;
         height: 40px;
         margin: 30px 0;
+    }
+
+    .ProjectPage .main-title {
+        font-size: 44px;
     }
 }
 
