@@ -1,5 +1,5 @@
-import Education from '../Education/Education'
-import Resume from '../Resume/Resume'
+import Education from '../../components/Education/Education'
+import Resume from '../../components/Resume/Resume'
 
 export default function About() {
     return (

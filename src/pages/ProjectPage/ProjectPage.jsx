@@ -1,6 +1,6 @@
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
-import ImageComponent from '../ImageComponent/ImageComponent';
+import ImageComponent from '../../components/ImageComponent/ImageComponent';
 import './ProjectPage.css'
 import { getAllProjects, getKeywords, getMobileSrc } from '../../database/repository'
 import { animateScroll } from 'react-scroll';

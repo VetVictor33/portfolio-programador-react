@@ -1,4 +1,4 @@
-import SocialNavbar from '../SocialNavbar/SocialNavbar'
+import SocialNavbar from '../../components/SocialNavbar/SocialNavbar'
 import './Contact.css'
 import ProfileImg from '../../assets/perfil.jpg'
 import Gmail from '../../assets/icons/gmail.svg'

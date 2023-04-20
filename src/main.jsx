@@ -6,11 +6,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import ErrorPage from './componentes/ErrorPage/ErrorPage';
-import About from './componentes/About/About';
-import Home from './componentes/Home/Home'
-import ProjectPage from './componentes/ProjectPage/ProjectPage';
-import Contact from './componentes/Contact/Contact';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
+import About from './pages/About/About';
+import Home from './pages/Home/Home'
+import ProjectPage from './pages/ProjectPage/ProjectPage';
+import Contact from './pages/Contact/Contact';
 
 const router = createBrowserRouter([
   {
