@@ -1,11 +1,25 @@
 import './Projects.css'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import ProjectImg from './../../assets/icons/project.png'
-import { getAllProjects } from '../../database/repository'
-
-const projects = getAllProjects();
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export default function Projects() {
+    const [projects, setProjects] = useState(null)
+
+    async function request() {
+        const url = `http://localhost:3000/projects`;
+        const response = await fetch(url);
+        const data = await response.json();
+        setProjects(data.reverse());
+    }
+
+    useEffect(() => {
+        request()
+    }, []);
+
+
+
     return (
         <section className="Projects">
             <article className="projetcs-introduction">
@@ -20,7 +34,7 @@ export default function Projects() {
                 </p>
             </article>
             <div className="projects-cards">
-                {projects.map((project) => {
+                {projects && projects.map((project) => {
                     return (
                         <ProjectCard key={project.id} project={project} />
                     )
