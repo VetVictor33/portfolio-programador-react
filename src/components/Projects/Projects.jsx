@@ -3,19 +3,24 @@ import ProjectCard from '../ProjectCard/ProjectCard'
 import ProjectImg from './../../assets/icons/project.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { requestProjects } from '../../database/fetchAPI';
 
 export default function Projects() {
     const [projects, setProjects] = useState(null)
 
-    async function request() {
-        const url = `https://sleepy-bull-frock.cyclic.app/projects`;
-        const response = await fetch(url);
-        const data = await response.json();
-        setProjects(data.reverse());
+
+    async function getProjectsFromApi() {
+        const projects = await requestProjects();
+        setProjects(projects);
     }
 
     useEffect(() => {
-        request()
+        const projectsFromLocalStorage = JSON.parse(localStorage.getItem('projects'));
+        if (!projectsFromLocalStorage) {
+            getProjectsFromApi();
+        } else {
+            setProjects(projectsFromLocalStorage)
+        }
     }, []);
 
     return (
