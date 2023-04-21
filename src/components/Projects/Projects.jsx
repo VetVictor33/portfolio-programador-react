@@ -3,7 +3,7 @@ import ProjectCard from '../ProjectCard/ProjectCard'
 import ProjectImg from './../../assets/icons/project.png'
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { requestProjects } from '../../database/fetchAPI';
+import { getProjectsFromLocalStorage, requestProjects } from '../../database/repository';
 
 export default function Projects() {
     const [projects, setProjects] = useState(null)
@@ -15,7 +15,7 @@ export default function Projects() {
     }
 
     useEffect(() => {
-        const projectsFromLocalStorage = JSON.parse(localStorage.getItem('projects'));
+        const projectsFromLocalStorage = getProjectsFromLocalStorage();
         if (!projectsFromLocalStorage) {
             getProjectsFromApi();
         } else {

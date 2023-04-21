@@ -3,19 +3,23 @@ import CompEdu from '../CompEdu/CompEdu'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
 import ComplEdu from '../../assets/icons/puzzle.png'
 import { useEffect, useState } from 'react'
+import { getCompEduFromLocalStorage, requestComEdu } from '../../database/repository'
 
 export default function Education() {
     const [complementaryEducation, setComplementaryEducation] = useState(null)
 
-    async function request() {
-        const url = `https://sleepy-bull-frock.cyclic.app/complementary-education`;
-        const response = await fetch(url);
-        const data = await response.json();
-        setComplementaryEducation(data.reverse());
+    async function getCompEduFromApi() {
+        const compEdu = await requestComEdu();
+        setComplementaryEducation(compEdu);
     }
 
     useEffect(() => {
-        request()
+        const compEduFromLocalStorage = getCompEduFromLocalStorage();
+        if (!compEduFromLocalStorage) {
+            getCompEduFromApi();
+        } else {
+            setProjects(compEduFromLocalStorage);
+        }
     }, []);
 
     return (
