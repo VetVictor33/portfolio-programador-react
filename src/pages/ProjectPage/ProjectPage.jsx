@@ -3,14 +3,30 @@ import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { animateScroll } from 'react-scroll';
 import ImageComponent from '../../components/ImageComponent/ImageComponent';
-import { getKeywords, getMobileSrc, getSingleProject } from '../../database/repository';
+import { getKeywords, getMobileSrc, getSingleProject, requestProjects } from '../../database/repository';
 import './ProjectPage.css';
 
 export default function ProjectPage() {
     animateScroll.scrollToTop();
     let { projectId } = useParams();
+    const [request, setRequest] = useState(null);
 
     let response = getSingleProject(+projectId);
+
+    useEffect(() => { }, [request])
+
+    if (!response) {
+        async function sendRequest() {
+            await requestProjects();
+            setRequest(true);
+        }
+        sendRequest();
+        return (
+            <> Waiting request ...</>
+        )
+    }
+
+
     if (!response[0]) {
         projectId = 16;
         response = getSingleProject(projectId);
@@ -27,8 +43,6 @@ export default function ProjectPage() {
 
     const preveiusProject = project.id >= (projectsLength) ? 1 : (project.id) + 1;
     const nextProject = project.id > 1 ? (project.id) - 1 : projectsLength;
-
-
     return (
         <div className='ProjectPage'>
             {project && <>
