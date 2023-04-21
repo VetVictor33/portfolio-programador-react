@@ -8,7 +8,7 @@ export default function Education() {
     const [complementaryEducation, setComplementaryEducation] = useState(null)
 
     async function request() {
-        const url = `http://localhost:3000/complementary-education`;
+        const url = `https://sleepy-bull-frock.cyclic.app/complementary-education`;
         const response = await fetch(url);
         const data = await response.json();
         setComplementaryEducation(data.reverse());

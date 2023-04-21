@@ -8,7 +8,7 @@ export default function Projects() {
     const [projects, setProjects] = useState(null)
 
     async function request() {
-        const url = `http://localhost:3000/projects`;
+        const url = `https://sleepy-bull-frock.cyclic.app/projects`;
         const response = await fetch(url);
         const data = await response.json();
         setProjects(data.reverse());
