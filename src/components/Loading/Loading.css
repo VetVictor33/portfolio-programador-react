@@ -1,0 +1,32 @@
+.Loading {
+    width: 350px;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Loading .bar-container {
+    height: 33px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+}
+
+.Loading .bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    animation: 5s infinite slide;
+}
+
+@keyframes slide {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+
+    }
+}

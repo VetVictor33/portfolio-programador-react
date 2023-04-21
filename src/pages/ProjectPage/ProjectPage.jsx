@@ -5,6 +5,7 @@ import { animateScroll } from 'react-scroll';
 import ImageComponent from '../../components/ImageComponent/ImageComponent';
 import { getKeywords, getMobileSrc, getSingleProject, requestProjects } from '../../database/repository';
 import './ProjectPage.css';
+import Loading from '../../components/Loading/Loading';
 
 export default function ProjectPage() {
     animateScroll.scrollToTop();
@@ -15,14 +16,14 @@ export default function ProjectPage() {
 
     useEffect(() => { }, [request])
 
-    if (!response) {
-        async function sendRequest() {
+    if (true) {
+        /*async function sendRequest() {
             await requestProjects();
             setRequest(true);
         }
-        sendRequest();
+        sendRequest();*/
         return (
-            <> Waiting request ...</>
+            <Loading />
         )
     }
 
