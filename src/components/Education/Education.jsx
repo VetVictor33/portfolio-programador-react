@@ -18,7 +18,7 @@ export default function Education() {
         if (!compEduFromLocalStorage) {
             getCompEduFromApi();
         } else {
-            setProjects(compEduFromLocalStorage);
+            setComplementaryEducation(compEduFromLocalStorage);
         }
     }, []);
 

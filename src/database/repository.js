@@ -5,17 +5,17 @@ export async function requestProjects() {
 
     const dataStringfied = JSON.stringify(data.reverse());
     localStorage.setItem('projects', dataStringfied);
-    return data.reverse();
+    return data;
 }
 
 export async function requestComEdu() {
-    const url = `https://sleepy-bull-frock.cyclic.app/compelmentary-education`;
+    const url = `https://sleepy-bull-frock.cyclic.app/complementary-education`;
     const response = await fetch(url);
     const data = await response.json();
 
     const dataStringfied = JSON.stringify(data.reverse());
     localStorage.setItem('compEdu', dataStringfied);
-    return data.reverse();
+    return data;
 }
 
 export const getProjectsFromLocalStorage = () => JSON.parse(localStorage.getItem('projects'));
