@@ -18,8 +18,6 @@ export default function Projects() {
         request()
     }, []);
 
-
-
     return (
         <section className="Projects">
             <article className="projetcs-introduction">

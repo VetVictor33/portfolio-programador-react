@@ -2,11 +2,22 @@ import './Education.css'
 import CompEdu from '../CompEdu/CompEdu'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
 import ComplEdu from '../../assets/icons/puzzle.png'
-import { getAllCompEdu } from '../../database/repository'
-
-const complementaryEducation = getAllCompEdu();
+import { useEffect, useState } from 'react'
 
 export default function Education() {
+    const [complementaryEducation, setComplementaryEducation] = useState(null)
+
+    async function request() {
+        const url = `http://localhost:3000/complementary-education`;
+        const response = await fetch(url);
+        const data = await response.json();
+        setComplementaryEducation(data.reverse());
+    }
+
+    useEffect(() => {
+        request()
+    }, []);
+
     return (
         <div className="Education">
             <section className="primary-educaton">
@@ -37,7 +48,7 @@ export default function Education() {
                     <h2 className="main-title smaller-title">Cursos Complementares</h2>
                 </div>
                 <div className="CompEdu">
-                    {complementaryEducation.map((compEdu) => {
+                    {complementaryEducation && complementaryEducation.map((compEdu) => {
                         return (
                             <CompEdu key={compEdu.id} props={compEdu} />
                         )
