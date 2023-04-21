@@ -1,4 +1,3 @@
-
 export async function requestProjects() {
     const url = `https://sleepy-bull-frock.cyclic.app/projects`;
     const response = await fetch(url);
@@ -23,22 +22,26 @@ export const getProjectsFromLocalStorage = () => JSON.parse(localStorage.getItem
 
 export const getCompEduFromLocalStorage = () => JSON.parse(localStorage.getItem('compEdu'));
 
-export async function getMobileSrc(id) {
-    let projects = getProjectsFromLocalStorage();
-    if (!projects) {
-        projects = await requestProjects();
-    }
-    const project = projects().find((project) => project.id === +id);
+export function getSingleProject(id) {
+    const projects = getProjectsFromLocalStorage();
+    if (!projects) return
+    const projectsLength = projects.length;
+    const project = projects.find((project) => project.id === +id);
+    return [project, projectsLength]
+}
+
+export function getMobileSrc(id) {
+    const projects = getProjectsFromLocalStorage();
+    if (!projects) return
+    const project = projects.find((project) => +project.id === +id);
     let src = project.imgSrc;
     src += `-mobile`;
     return src
 }
 
-export async function getKeywords(id) {
-    let projects = getProjectsFromLocalStorage();
-    if (!projects) {
-        projects = await requestProjects();
-    }
+export function getKeywords(id) {
+    const projects = getProjectsFromLocalStorage();
+    if (!projects) return
     const project = projects.find(projects => projects.id === +id);
     const keywords = project.keywords;
     return keywords
