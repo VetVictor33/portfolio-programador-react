@@ -1,4 +1,3 @@
-import LoadingImg from '../../assets/loading.png'
 import './Loading.css'
 
 export default function Loading() {

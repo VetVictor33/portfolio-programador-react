@@ -16,12 +16,12 @@ export default function ProjectPage() {
 
     useEffect(() => { }, [request])
 
-    if (true) {
-        /*async function sendRequest() {
+    if (!response) {
+        async function sendRequest() {
             await requestProjects();
             setRequest(true);
         }
-        sendRequest();*/
+        sendRequest();
         return (
             <Loading />
         )
