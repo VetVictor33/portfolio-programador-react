@@ -24,9 +24,19 @@
     margin: 10px;
 }
 
-.Header nav {
+.Header .header-navbar {
     display: flex;
     flex-direction: column;
+}
+
+.Header .header-navbar a:hover {
+    all: unset;
+    cursor: pointer;
+}
+
+.Header .header-navbar a.active {
+    color: var(--terciary-color);
+    text-decoration: overline;
 }
 
 .Header .menu {

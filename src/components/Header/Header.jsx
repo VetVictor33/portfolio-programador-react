@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import ProgrammerIcon from '../../assets/icons/header-icon.png';
 import Menu from '../../assets/icons/menu.svg';
 import './Header.css';
@@ -53,13 +53,13 @@ export default function Header() {
                 <img className='menu' src={Menu} style={{ cursor: 'pointer' }} onClick={handleToggleShown} />
                 <ul onClick={handleRemoveMenu} ref={linksRef}>
                     <li>
-                        <Link to={`/`} >Home</Link>
+                        <NavLink to={'/'} >Home</NavLink>
                     </li>
                     <li>
-                        <Link to={`/about`} >Sobre</Link>
+                        <NavLink to={`/about`} >Sobre</NavLink>
                     </li>
                     <li>
-                        <Link to={`/contact`} >Contato</Link>
+                        <NavLink to={`/contact`} >Contato</NavLink>
                     </li>
                 </ul>
             </nav>
