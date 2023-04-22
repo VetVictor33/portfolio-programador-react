@@ -49,9 +49,9 @@ export default function ProjectPage() {
                     <ImageComponent imgSrc={project.imgSrc} keywords={project.keywords} />
                 </a>
                 <div className='bts'>
-                    <Link className='bt bt-left' to={`/project/${preveiusProject}`}></Link>
+                    <Link className='bt bt-left' to={`/project/${preveiusProject}`} preventScrollReset={true}></Link>
                     <p className='main-title'>{project.title}</p>
-                    <Link className='bt bt-right' to={`/project/${nextProject}`}></Link>
+                    <Link className='bt bt-right' to={`/project/${nextProject}`} preventScrollReset={true}></Link>
                 </div>
                 <div className='project-keywords'>
                     {keywords && keywords.map(keyword => {
