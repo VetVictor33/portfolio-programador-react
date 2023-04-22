@@ -47,10 +47,10 @@ export default function Header() {
     return (
         <header className="Header" ref={headerRef}>
             <Link to={`/`} >
-                <img src={ProgrammerIcon} alt="ícone programador" style={{ cursor: 'pointer' }} />
+                <img src={ProgrammerIcon} alt="ícone programador" />
             </Link>
             <nav className="header-navbar">
-                <img className='menu' src={Menu} style={{ cursor: 'pointer' }} onClick={handleToggleShown} />
+                <img className='menu' src={Menu} onClick={handleToggleShown} />
                 <ul onClick={handleRemoveMenu} ref={linksRef}>
                     <li>
                         <NavLink to={'/'} >Home</NavLink>
