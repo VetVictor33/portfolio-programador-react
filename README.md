@@ -8,6 +8,8 @@ OBS: As resoluções escolhidas para os prints são aproximadamente 1200x800 par
 
 Link do deploy : https://victor-feliciano.onrender.com/
 
+Os dados dos projetos e da educação complementar são consumidos de uma API que desenvolvi utilizando Express (https://github.com/VetVictor33/portfolio-react-vite-backend)
+
 ## Como utilizar
 
 ## Home
