@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { animateScroll } from 'react-scroll';
 import ProgrammerIcon from '../../assets/icons/header-icon.png';
 import Menu from '../../assets/icons/menu.svg';
 import './Header.css';
@@ -40,31 +39,27 @@ export default function Header() {
         };
     }, []);
 
-    const handleToggleShown = () => linksRef.current.classList.toggle('shown')
+    const handleToggleShown = () => linksRef.current.classList.toggle('shown');
     const handleRemoveMenu = () => linksRef.current.classList.remove('shown');
-
-    const handleScrollToTop = () => {
-        animateScroll.scrollToTop()
-    }
 
 
 
     return (
         <header className="Header" ref={headerRef}>
-            <Link to={`/`} onClick={handleScrollToTop}>
+            <Link to={`/`} >
                 <img src={ProgrammerIcon} alt="ícone programador" style={{ cursor: 'pointer' }} />
             </Link>
             <nav className="header-navbar">
                 <img className='menu' src={Menu} style={{ cursor: 'pointer' }} onClick={handleToggleShown} />
                 <ul onClick={handleRemoveMenu} ref={linksRef}>
                     <li>
-                        <Link to={`/`} onClick={handleScrollToTop}>Home</Link>
+                        <Link to={`/`} >Home</Link>
                     </li>
                     <li>
-                        <Link to={`/about`} onClick={handleScrollToTop}>Sobre</Link>
+                        <Link to={`/about`} >Sobre</Link>
                     </li>
                     <li>
-                        <Link to={`/contact`} onClick={handleScrollToTop}>Contato</Link>
+                        <Link to={`/contact`} >Contato</Link>
                     </li>
                 </ul>
             </nav>
