@@ -65,11 +65,11 @@
 
     .Presentation .presentation-img img {
         max-width: auto;
-        max-height: 20vh;
+        max-height: 25vh;
         border-radius: 50%;
         background-image: linear-gradient(to bottom right, var(--terciary-color), var(--secondary-color));
-        padding: 0.33%;
-        margin-right: 20px;
+        padding: 3%;
+        margin: auto
     }
 }
 

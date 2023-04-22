@@ -1,5 +1,5 @@
 import './Presentation.css'
-import Profile from './../../assets/perfil3.jpg'
+import Profile from './../../assets/perfil/perfil4.jpg'
 
 export default function Presentation() {
     return (
