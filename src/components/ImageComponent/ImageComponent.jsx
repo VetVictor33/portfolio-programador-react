@@ -2,7 +2,7 @@ import { arrayImgs } from '../../imports';
 import './ImageComponent.css'
 
 
-export default function ImageComponent({ imgSrc, mobile }) {
+export default function ImageComponent({ imgSrc, mobile, handleNavigate, link }) {
     const pathname = window.location.pathname;
     let src = arrayImgs.find(img => img.indexOf('no_image_available') !== -1);
 
@@ -17,9 +17,11 @@ export default function ImageComponent({ imgSrc, mobile }) {
     })
 
     return (
-        <div className='ImageComponent'>
-            <img className='card-img' src={src} alt='Projeto' />
-            {pathname !== '/' && <p className='tooltip'>GitHub</p>}
+        <div className='ImageComponent' onClick={handleNavigate}>
+            <a href={link} target='_blank'>
+                <img className='card-img' src={src} alt='Projeto' />
+                {pathname !== '/' && <p className='tooltip'>GitHub</p>}
+            </a>
         </div>
     )
 
