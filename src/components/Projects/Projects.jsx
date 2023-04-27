@@ -8,20 +8,20 @@ import Loading from '../Loading/Loading';
 export default function Projects() {
     const [projects, setProjects] = useState(null)
 
-    /*
-        async function getProjectsFromApi() {
-            const projects = await requestProjects();
-            setProjects(projects);
+
+    async function getProjectsFromApi() {
+        const projects = await requestProjects();
+        setProjects(projects);
+    }
+
+    useEffect(() => {
+        const projectsFromLocalStorage = getProjectsFromLocalStorage();
+        if (!projectsFromLocalStorage) {
+            getProjectsFromApi();
+        } else {
+            setProjects(projectsFromLocalStorage)
         }
-    
-        useEffect(() => {
-            const projectsFromLocalStorage = getProjectsFromLocalStorage();
-            if (!projectsFromLocalStorage) {
-                getProjectsFromApi();
-            } else {
-                setProjects(projectsFromLocalStorage)
-            }
-        }, []);*/
+    }, []);
 
     return (
         <section className="Projects">
