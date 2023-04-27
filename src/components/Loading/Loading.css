@@ -20,6 +20,13 @@
     animation: 5s infinite slide;
 }
 
+.Loading .apologies {
+    margin-top: 20px;
+    padding: 15px 5px;
+    border-radius: 18px;
+    background-color: rgba(0, 0, 0, 0.384);
+}
+
 @keyframes slide {
     from {
         width: 0%;
