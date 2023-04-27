@@ -3,24 +3,25 @@ import { getProjectsFromLocalStorage, requestProjects } from '../../database/rep
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectImg from './../../assets/icons/project.png';
 import './Projects.css';
+import Loading from '../Loading/Loading';
 
 export default function Projects() {
     const [projects, setProjects] = useState(null)
 
-
-    async function getProjectsFromApi() {
-        const projects = await requestProjects();
-        setProjects(projects);
-    }
-
-    useEffect(() => {
-        const projectsFromLocalStorage = getProjectsFromLocalStorage();
-        if (!projectsFromLocalStorage) {
-            getProjectsFromApi();
-        } else {
-            setProjects(projectsFromLocalStorage)
+    /*
+        async function getProjectsFromApi() {
+            const projects = await requestProjects();
+            setProjects(projects);
         }
-    }, []);
+    
+        useEffect(() => {
+            const projectsFromLocalStorage = getProjectsFromLocalStorage();
+            if (!projectsFromLocalStorage) {
+                getProjectsFromApi();
+            } else {
+                setProjects(projectsFromLocalStorage)
+            }
+        }, []);*/
 
     return (
         <section className="Projects">
@@ -36,11 +37,15 @@ export default function Projects() {
                 </p>
             </article>
             <div className="projects-cards">
-                {projects && projects.map((project) => {
-                    return (
-                        <ProjectCard key={project.id} project={project} />
-                    )
-                })}
+                {!!projects ?
+                    projects.map((project) => {
+                        return (
+                            <ProjectCard key={project.id} project={project} />
+                        )
+                    })
+                    :
+                    <Loading />
+                }
             </div>
         </section>
     )

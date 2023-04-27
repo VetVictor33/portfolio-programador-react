@@ -1,11 +1,15 @@
 export async function requestProjects() {
     const url = `https://sleepy-bull-frock.cyclic.app/projects`;
-    const response = await fetch(url);
-    const data = await response.json();
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
 
-    const dataStringfied = JSON.stringify(data.reverse());
-    localStorage.setItem('projects', dataStringfied);
-    return data;
+        const dataStringfied = JSON.stringify(data.reverse());
+        localStorage.setItem('projects', dataStringfied);
+        return data;
+    } catch (error) {
+        return null;
+    }
 }
 
 export async function requestComEdu() {
