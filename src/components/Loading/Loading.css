@@ -27,6 +27,10 @@
     background-color: rgba(0, 0, 0, 0.384);
 }
 
+.Loading a {
+    text-decoration: underline;
+}
+
 @keyframes slide {
     from {
         width: 0%;

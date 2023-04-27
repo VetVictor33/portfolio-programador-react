@@ -46,7 +46,7 @@ export default function Projects() {
                         )
                     })
                     :
-                    <Loading />
+                    <Loading setProjects={setProjects} />
                 }
             </div>
         </section>
