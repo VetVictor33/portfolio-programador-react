@@ -1,8 +1,9 @@
+import api from '../api/axios'
+
 export async function requestProjects() {
-    const url = `https://sleepy-bull-frock.cyclic.app/projects`;
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const response = await api.get('/projects');
+        const { data } = response;
 
         const dataStringfied = JSON.stringify(data.reverse());
         localStorage.setItem('projects', dataStringfied);
@@ -13,10 +14,9 @@ export async function requestProjects() {
 }
 
 export async function requestComEdu() {
-    const url = `https://sleepy-bull-frock.cyclic.app/complementary-education`;
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const response = await api.get('/complementary-education');
+        const { data } = response;
 
         const dataStringfied = JSON.stringify(data.reverse());
         localStorage.setItem('compEdu', dataStringfied);

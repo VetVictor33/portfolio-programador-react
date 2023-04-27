@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getProjectsFromLocalStorage, requestProjects } from '../../database/repository';
+import { getProjectsFromLocalStorage, requestProjects } from '../../services/database/repository';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectImg from './../../assets/icons/project.png';
 import './Projects.css';

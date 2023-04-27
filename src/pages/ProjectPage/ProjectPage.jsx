@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import ImageComponent from '../../components/ImageComponent/ImageComponent';
-import { getKeywords, getMobileSrc, getSingleProject, requestProjects } from '../../database/repository';
+import { getKeywords, getMobileSrc, getSingleProject, requestProjects } from '../../services/database/repository';
 import './ProjectPage.css';
 import Loading from '../../components/Loading/Loading';
 
