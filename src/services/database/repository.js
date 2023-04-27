@@ -1,21 +1,29 @@
-export async function requestProjects() {
-    const url = `https://sleepy-bull-frock.cyclic.app/projects`;
-    const response = await fetch(url);
-    const data = await response.json();
+import api from '../api/axios'
 
-    const dataStringfied = JSON.stringify(data.reverse());
-    localStorage.setItem('projects', dataStringfied);
-    return data;
+export async function requestProjects() {
+    try {
+        const response = await api.get('/projects');
+        const { data } = response;
+
+        const dataStringfied = JSON.stringify(data.reverse());
+        localStorage.setItem('projects', dataStringfied);
+        return data;
+    } catch (error) {
+        return null;
+    }
 }
 
 export async function requestComEdu() {
-    const url = `https://sleepy-bull-frock.cyclic.app/complementary-education`;
-    const response = await fetch(url);
-    const data = await response.json();
+    try {
+        const response = await api.get('/complementary-education');
+        const { data } = response;
 
-    const dataStringfied = JSON.stringify(data.reverse());
-    localStorage.setItem('compEdu', dataStringfied);
-    return data;
+        const dataStringfied = JSON.stringify(data.reverse());
+        localStorage.setItem('compEdu', dataStringfied);
+        return data;
+    } catch (error) {
+        return null;
+    }
 }
 
 export const getProjectsFromLocalStorage = () => JSON.parse(localStorage.getItem('projects'));

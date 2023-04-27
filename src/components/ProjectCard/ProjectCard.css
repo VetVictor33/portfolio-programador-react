@@ -10,23 +10,23 @@
     height: 100%;
     width: 75%;
     border-radius: 10px;
-    box-shadow: 10px 10px 20px 10px var(--primary-color);
 
 }
 
 .ProjectCard .card-img:hover {
-    border: 5px solid var(--terciary-color);
+    transform: scale(1.033);
 }
 
 .ProjectCard h2:hover {
     cursor: pointer;
-    color: var(--terciary-color)
+    color: var(--terciary-color);
 }
 
 .ProjectCard h2 {
     text-align: center;
-    margin: 10px 0;
+    margin: auto;
     font-size: 26px;
+    width: fit-content;
 }
 
 .ProjectCard p {

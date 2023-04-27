@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import ImageComponent from '../../components/ImageComponent/ImageComponent';
-import { getKeywords, getMobileSrc, getSingleProject, requestProjects } from '../../database/repository';
+import { getKeywords, getMobileSrc, getSingleProject, requestProjects } from '../../services/database/repository';
 import './ProjectPage.css';
 import Loading from '../../components/Loading/Loading';
 
@@ -45,9 +45,7 @@ export default function ProjectPage() {
     return (
         <div className='ProjectPage'>
             {project && <>
-                <a href={project.link} target="_blank">
-                    <ImageComponent imgSrc={project.imgSrc} keywords={project.keywords} />
-                </a>
+                <ImageComponent imgSrc={project.imgSrc} link={project.link} />
                 <div className='bts'>
                     <Link className='bt bt-left' to={`/project/${preveiusProject}`} preventScrollReset={true}></Link>
                     <p className='main-title'>{project.title}</p>
@@ -65,9 +63,7 @@ export default function ProjectPage() {
                 {hasMobile &&
                     <div className='mobile'>
                         <h2>Idealizado para mobile:</h2>
-                        <a href={project.link} target="_blank">
-                            <ImageComponent imgSrc={mobileSrc} mobile={true} />
-                        </a>
+                        <ImageComponent imgSrc={mobileSrc} link={project.link} mobile={true} />
                     </div>
                 }
             </>}

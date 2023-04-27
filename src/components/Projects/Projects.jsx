@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { getProjectsFromLocalStorage, requestProjects } from '../../database/repository';
+import { getProjectsFromLocalStorage, requestProjects } from '../../services/database/repository';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectImg from './../../assets/icons/project.png';
 import './Projects.css';
+import Loading from '../Loading/Loading';
 
 export default function Projects() {
     const [projects, setProjects] = useState(null)
@@ -27,20 +28,26 @@ export default function Projects() {
             <article className="projetcs-introduction">
                 <h1 className="main-title">Projetos Desenvolvidos</h1>
                 <img className="icon projects-img" src={ProjectImg} />
-                <p className="text-description">Esses são alguns dos projetos que desenvolvi para praticar meus
-                    conhecimentos em programação.
-                    Fiz questão de deixar os projetos mais simples, de quando iniciei o aprendizado, para enfatizar a
-                    <span className="texto-destaque"> evolução</span>.
+                <p className="text-description">
+                    Aqui estão alguns projetos pessoais e outros propostos em aulas. São projetos Backend, Frontend e FullSatck. Alguns têm responsividade
+                    para dar suporte a diversos tamanhos de tela, incluindo dispositivos mobile.
+                </p >
+                <p className="text-description">Clique em uns dos cards abaixo para  navegar entre os projetos e encontrar mais detalhes,
+                    incluindo o link do repositório no GitHub e o link do deploy, quando presente!
                 </p>
                 <p className="text-description"> A principais tecnologias são JavaScript, React, Node, HTML e CSS.
                 </p>
             </article>
             <div className="projects-cards">
-                {projects && projects.map((project) => {
-                    return (
-                        <ProjectCard key={project.id} project={project} />
-                    )
-                })}
+                {!!projects ?
+                    projects.map((project) => {
+                        return (
+                            <ProjectCard key={project.id} project={project} />
+                        )
+                    })
+                    :
+                    <Loading />
+                }
             </div>
         </section>
     )

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import ComplEdu from '../../assets/icons/puzzle.png'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
-import { getCompEduFromLocalStorage, requestComEdu } from '../../database/repository'
+import { getCompEduFromLocalStorage, requestComEdu } from '../../services/database/repository'
 import CompEdu from '../CompEdu/CompEdu'
 import './Education.css'
 
