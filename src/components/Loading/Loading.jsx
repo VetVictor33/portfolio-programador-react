@@ -8,7 +8,6 @@ export default function Loading({ setProjects }) {
     async function getProjectsFromApi() {
         const projects = await requestProjects();
         setProjects(projects);
-        console.log('setei os projects')
     }
 
     setTimeout(() => {
