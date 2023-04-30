@@ -1,3 +1,4 @@
+import { getItem, setItem } from '../../utils/storage';
 import api from '../api/axios'
 
 export async function requestProjects() {
@@ -6,7 +7,7 @@ export async function requestProjects() {
         const { data } = response;
 
         const dataStringfied = JSON.stringify(data.reverse());
-        localStorage.setItem('projects', dataStringfied);
+        setItem('projects', dataStringfied);
         return data;
     } catch (error) {
         return null;
@@ -19,19 +20,19 @@ export async function requestComEdu() {
         const { data } = response;
 
         const dataStringfied = JSON.stringify(data.reverse());
-        localStorage.setItem('compEdu', dataStringfied);
+        setItem('compEdu', dataStringfied);
         return data;
     } catch (error) {
         return null;
     }
 }
 
-export const getProjectsFromLocalStorage = () => JSON.parse(localStorage.getItem('projects'));
+export const getProjectsFromStorage = () => JSON.parse(getItem('projects'));
 
-export const getCompEduFromLocalStorage = () => JSON.parse(localStorage.getItem('compEdu'));
+export const getCompEduFromLocalStorage = () => JSON.parse(getItem('compEdu'));
 
 export function getSingleProject(id) {
-    const projects = getProjectsFromLocalStorage();
+    const projects = getProjectsFromStorage();
     if (!projects) return
     const projectsLength = projects.length;
     const project = projects.find((project) => project.id === +id);
@@ -39,7 +40,7 @@ export function getSingleProject(id) {
 }
 
 export function getMobileSrc(id) {
-    const projects = getProjectsFromLocalStorage();
+    const projects = getProjectsFromStorage();
     if (!projects) return
     const project = projects.find((project) => +project.id === +id);
     let src = project.imgSrc;
@@ -48,7 +49,7 @@ export function getMobileSrc(id) {
 }
 
 export function getKeywords(id) {
-    const projects = getProjectsFromLocalStorage();
+    const projects = getProjectsFromStorage();
     if (!projects) return
     const project = projects.find(projects => projects.id === +id);
     const keywords = project.keywords;

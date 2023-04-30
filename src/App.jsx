@@ -4,7 +4,7 @@ import Footer from './components/Footer/Footer'
 import { Outlet, ScrollRestoration } from 'react-router-dom'
 
 function App() {
-  localStorage.clear();
+
   return (
     <div className="App">
       <Header />

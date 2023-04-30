@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Loading.css'
-import { getProjectsFromLocalStorage, requestProjects } from '../../services/database/repository';
+import { getProjectsFromStorage, requestProjects } from '../../services/database/repository';
 
 export default function Loading({ setProjects }) {
     const [timeOut, setTimeOut] = useState(false);
@@ -11,7 +11,7 @@ export default function Loading({ setProjects }) {
     }
 
     setTimeout(() => {
-        if (!getProjectsFromLocalStorage()) {
+        if (!getProjectsFromStorage()) {
             getProjectsFromApi();
         }
     }, 1500);
