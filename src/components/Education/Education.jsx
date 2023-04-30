@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import ComplEdu from '../../assets/icons/puzzle.png'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
-import { getCompEduFromLocalStorage, requestComEdu } from '../../services/database/repository'
+import { getCompEduFromStorage, requestComEdu } from '../../services/database/repository'
 import CompEdu from '../CompEdu/CompEdu'
 import './Education.css'
 
@@ -14,7 +14,7 @@ export default function Education() {
     }
 
     useEffect(() => {
-        const compEduFromLocalStorage = getCompEduFromLocalStorage();
+        const compEduFromLocalStorage = getCompEduFromStorage();
         if (!compEduFromLocalStorage) {
             getCompEduFromApi();
         } else {

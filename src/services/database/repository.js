@@ -29,7 +29,7 @@ export async function requestComEdu() {
 
 export const getProjectsFromStorage = () => JSON.parse(getItem('projects'));
 
-export const getCompEduFromLocalStorage = () => JSON.parse(getItem('compEdu'));
+export const getCompEduFromStorage = () => JSON.parse(getItem('compEdu'));
 
 export function getSingleProject(id) {
     const projects = getProjectsFromStorage();
