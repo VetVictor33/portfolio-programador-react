@@ -7,7 +7,23 @@
     height: 100%;
 }
 
+.Loading .refresh {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 15px);
+    width: 30px;
+}
+
+.Loading .refresh:hover {
+    cursor: pointer;
+}
+
+.Loading .rotate {
+    animation: 6s ease-out rotate;
+}
+
 .Loading .bar-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 30vh;
@@ -18,7 +34,7 @@
 
 .Loading .bar {
     background-color: rgba(128, 128, 128, 0.096);
-    animation: 1.7s infinite slide;
+    animation: 2s linear infinite slide;
 }
 
 .Loading .upper-bar {
@@ -37,5 +53,15 @@
     to {
         width: 100%;
 
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(2160deg);
     }
 }

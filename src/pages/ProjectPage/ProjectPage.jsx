@@ -8,21 +8,26 @@ import Loading from '../../components/Loading/Loading';
 
 export default function ProjectPage() {
     let { projectId } = useParams();
-    const [request, setRequest] = useState(null);
+    const [request, setRequest] = useState(false);
 
     let response = getSingleProject(+projectId);
 
     useEffect(() => { }, [request])
 
     if (!response) {
-        async function sendRequest() {
-            await requestProjects();
-            setRequest(true);
+        async function getProjectsFromApi(param) {
+            if (param) {
+                setRequest(!request);
+                return
+            }
+            const response = await requestProjects();
+            if (!response) return
+            setRequest(!request);
         }
-        sendRequest();
+        getProjectsFromApi();
         return (
             <div className='LoadingProjectPage'>
-                <Loading />
+                <Loading refresh={getProjectsFromApi} />
             </div>
         )
     }

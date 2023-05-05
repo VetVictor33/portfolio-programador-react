@@ -21,7 +21,7 @@ export default function Projects() {
         } else {
             setProjects(projectsFromStorage)
         }
-    }, []);
+    }, [])
 
     return (
         <section className="Projects">
@@ -47,8 +47,8 @@ export default function Projects() {
                         )
                     })
                     :
-                    'loading'.split('').map((word) => (
-                        <Loading key={word} setProjects={setProjects} />
+                    'loading=)'.split('').map((char) => (
+                        <Loading key={char} refresh={setProjects} />
                     ))
                 }
             </div>
