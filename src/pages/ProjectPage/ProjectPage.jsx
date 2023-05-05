@@ -21,7 +21,9 @@ export default function ProjectPage() {
         }
         sendRequest();
         return (
-            <Loading />
+            <div className='LoadingProjectPage'>
+                <Loading />
+            </div>
         )
     }
 

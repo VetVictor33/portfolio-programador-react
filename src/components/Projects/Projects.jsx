@@ -6,7 +6,7 @@ import './Projects.css';
 import Loading from '../Loading/Loading';
 
 export default function Projects() {
-    const [projects, setProjects] = useState(null)
+    const [projects, setProjects] = useState();
 
 
     async function getProjectsFromApi() {
@@ -43,10 +43,13 @@ export default function Projects() {
                     projects.map((project) => {
                         return (
                             <ProjectCard key={project.id} project={project} />
+
                         )
                     })
                     :
-                    <Loading setProjects={setProjects} />
+                    'loading'.split('').map((word) => (
+                        <Loading key={word} setProjects={setProjects} />
+                    ))
                 }
             </div>
         </section>

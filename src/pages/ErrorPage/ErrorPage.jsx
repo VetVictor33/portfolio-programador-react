@@ -7,11 +7,11 @@ export default function ErrorPage() {
 
     return (
         <div className="ErrorPage">
-            <h1>Oops!</h1>
-            <p>Parece que ocorreu um erro. Que tal retornar para a <Link id='link' to={`/`}>página inicial? </Link></p>
+            <h1>Oops! {'=('}</h1>
             <p>
                 <i>{error.statusText || error.message}</i>
             </p>
+            <p>Parece que ocorreu um erro. Que tal retornar para a <Link id='link' to={`/`}>página inicial? </Link></p>
         </div>
     );
 }
