@@ -2,19 +2,19 @@ import { Link, useNavigate } from 'react-router-dom';
 import ImageComponent from '../ImageComponent/ImageComponent';
 import './ProjectCard.css';
 
-export default function ProjectCard({ project }) {
-    const { id, imgSrc, title } = project;
-    const keywords = project.keywords;
+export default function ProjectCard({ project, index }) {
+    const { id, title, image } = project;
+    const keywords = (project.keywords).split(',');
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate(`/project/${id}`);
+        navigate(`/project/${index}`);
     }
 
     return (
         <div className='ProjectCard'>
             <div>
-                <ImageComponent imgSrc={imgSrc} keywords={project.keywords} handleNavigate={handleNavigate} />
+                <ImageComponent image={image} keywords={project.keywords} handleNavigate={handleNavigate} />
                 <h2 onClick={handleNavigate}>{title}</h2>
             </div>
             <div className='card-keywords'>

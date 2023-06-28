@@ -11,6 +11,15 @@ import About from './pages/About/About';
 import Home from './pages/Home/Home'
 import ProjectPage from './pages/ProjectPage/ProjectPage';
 import Contact from './pages/Contact/Contact';
+import { ClientContext, GraphQLClient } from 'graphql-hooks';
+
+const client = new GraphQLClient({
+  url: "https://graphql.datocms.com/",
+  headers: {
+    "Authorization": `Bearer ${import.meta.env.VITE_DATO_CMS_API_TOKEN}`
+  }
+});
+
 
 const router = createBrowserRouter([
   {
@@ -39,6 +48,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ClientContext.Provider value={client}>
+      <RouterProvider router={router} />
+    </ClientContext.Provider>
   </React.StrictMode>
 )

@@ -1,27 +1,24 @@
+import { useQuery } from 'graphql-hooks';
 import { useEffect, useState } from 'react';
-import { getProjectsFromStorage, requestProjects } from '../../services/database/repository';
+import { getProjectsFromStorage, setProjectosInStorage } from '../../services/database/repository';
+import { ALL_PROJECTS_QUERY } from '../../services/datoCMS/querys';
+import Loading from '../Loading/Loading';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectImg from './../../assets/icons/project.png';
 import './Projects.css';
-import Loading from '../Loading/Loading';
 
 export default function Projects() {
     const [projects, setProjects] = useState(null)
-
-
-    async function getProjectsFromApi() {
-        const projects = await requestProjects();
-        setProjects(projects);
-    }
+    const { data } = useQuery(ALL_PROJECTS_QUERY);
 
     useEffect(() => {
-        const projectsFromStorage = getProjectsFromStorage();
-        if (!projectsFromStorage) {
-            getProjectsFromApi();
-        } else {
-            setProjects(projectsFromStorage)
+        if (data) {
+            const projectsData = data.allProjects;
+            setProjectosInStorage(projectsData);
+            setProjects(getProjectsFromStorage());
         }
-    }, []);
+    }, [data])
+
 
     return (
         <section className="Projects">
@@ -40,13 +37,13 @@ export default function Projects() {
             </article>
             <div className="projects-cards">
                 {!!projects ?
-                    projects.map((project) => {
+                    projects?.map((project) => {
                         return (
-                            <ProjectCard key={project.id} project={project} />
+                            <ProjectCard key={project.id} project={project} index={projects.indexOf(project)} />
                         )
                     })
                     :
-                    <Loading setProjects={setProjects} />
+                    <Loading />
                 }
             </div>
         </section>
