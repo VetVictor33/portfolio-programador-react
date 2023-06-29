@@ -2,11 +2,7 @@ import { useQuery } from 'graphql-hooks'
 import { useEffect, useState } from 'react'
 import ComplEdu from '../../assets/icons/puzzle.png'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
-<<<<<<< HEAD
-import { getCompEduFromStorage, requestComEdu } from '../../services/database/repository'
-=======
 import { COMPLEMENTARY_EDUCATION } from '../../services/datoCMS/querys'
->>>>>>> SettingCMS
 import CompEdu from '../CompEdu/CompEdu'
 import './Education.css'
 
@@ -16,18 +12,9 @@ export default function Education() {
     const { data } = useQuery(COMPLEMENTARY_EDUCATION);
 
     useEffect(() => {
-<<<<<<< HEAD
-        const compEduFromLocalStorage = getCompEduFromStorage();
-        if (!compEduFromLocalStorage) {
-            getCompEduFromApi();
-        } else {
-            setComplementaryEducation(compEduFromLocalStorage);
-=======
         if (data) {
             const edicationData = data.allComplementaryEducations;
-            console.log(data)
             setComplementaryEducation(edicationData);
->>>>>>> SettingCMS
         }
     }, [data])
 

@@ -1,5 +1,4 @@
 import { Image } from 'react-datocms/image';
-import { arrayImgs } from '../../imports';
 import './ImageComponent.css'
 
 

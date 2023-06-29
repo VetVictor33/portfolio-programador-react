@@ -18,7 +18,6 @@ export default function Projects({ presentationData }) {
             const projectsData = projectData.allProjects;
             setProjectosInStorage(projectsData);
             setProjects(getProjectsFromStorage());
-            console.log(projects)
         }
         setPresentation(presentationData)
     }, [projectData, presentationData])
