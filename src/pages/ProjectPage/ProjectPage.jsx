@@ -35,8 +35,10 @@ export default function ProjectPage() {
                         )
                     })}
                 </div>
-                <StructuredText data={project.description} />
-                {!!project.deployLink && <a href={deployLink} className='main-title' target='_blank'> Visitar o site </a>}
+                <div className='description-from-cms'>
+                    <StructuredText data={project.description} />
+                </div>
+                {!!project?.deployLink && <a href={project.deployLink} className='main-title' target='_blank'> Visitar o site </a>}
                 {project.mobile &&
                     <div className='mobile'>
                         <h2>Idealizado para mobile:</h2>
