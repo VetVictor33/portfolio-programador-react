@@ -8,7 +8,7 @@ OBS: As resoluções escolhidas para os prints são aproximadamente 1200x800 par
 
 Link do deploy : https://victor-feliciano.onrender.com/
 
-Os dados dos projetos e da educação complementar são consumidos de uma API que desenvolvi utilizando Express (https://github.com/VetVictor33/portfolio-react-vite-backend)
+Os dados dos projetos são carregados utilizando uma ferramenta de CMS
 
 ## Como utilizar
 
@@ -96,4 +96,4 @@ Flexbox e Grid para maior resposividade e melhor disposição dos elemnetos no c
 
 ## Como melhorar este projeto
 
-Transferir os dados para uma database como MongoDB ou MySQL
+Migrar para NextJs, utilizar TypeScript, estilizar com tailwind ou SASS
