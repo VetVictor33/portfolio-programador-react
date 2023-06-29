@@ -38,18 +38,22 @@
     display: none;
 }
 
+.Resume .first-paragraph-from-cms p,
+.Resume .second-paragraph-from-cms p {
+    font-size: 25px;
+    margin: 20px 3px;
+}
+
 @media (min-width: 1200px) {
 
     .Resume .text-with-icon img {
         display: block;
     }
 
-    .Resume p.text-description.course-description {
-        width: 80%;
-    }
-
-    .Resume .text-with-icon .text-description {
-        width: 100%;
+    .Resume .first-paragraph-from-cms p,
+    .Resume .second-paragraph-from-cms p {
+        font-size: 30px;
+        margin: 20px 100px;
     }
 
     .Resume .text-with-icon img {
@@ -61,5 +65,13 @@
     .Resume .about-img {
         display: block;
         height: 100%;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .Resume .first-paragraph-from-cms p,
+    .Resume .second-paragraph-from-cms p {
+        margin: 20px 300px;
     }
 }

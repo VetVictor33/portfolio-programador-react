@@ -1,26 +1,36 @@
+import { useQuery } from 'graphql-hooks'
 import { useEffect, useState } from 'react'
 import ComplEdu from '../../assets/icons/puzzle.png'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
+<<<<<<< HEAD
 import { getCompEduFromStorage, requestComEdu } from '../../services/database/repository'
+=======
+import { COMPLEMENTARY_EDUCATION } from '../../services/datoCMS/querys'
+>>>>>>> SettingCMS
 import CompEdu from '../CompEdu/CompEdu'
 import './Education.css'
 
 export default function Education() {
     const [complementaryEducation, setComplementaryEducation] = useState(null)
 
-    async function getCompEduFromApi() {
-        const compEdu = await requestComEdu();
-        setComplementaryEducation(compEdu);
-    }
+    const { data } = useQuery(COMPLEMENTARY_EDUCATION);
 
     useEffect(() => {
+<<<<<<< HEAD
         const compEduFromLocalStorage = getCompEduFromStorage();
         if (!compEduFromLocalStorage) {
             getCompEduFromApi();
         } else {
             setComplementaryEducation(compEduFromLocalStorage);
+=======
+        if (data) {
+            const edicationData = data.allComplementaryEducations;
+            console.log(data)
+            setComplementaryEducation(edicationData);
+>>>>>>> SettingCMS
         }
-    }, []);
+    }, [data])
+
 
     return (
         <div className="Education">
@@ -54,7 +64,7 @@ export default function Education() {
                 <div className="CompEdu">
                     {complementaryEducation && complementaryEducation.map((compEdu) => {
                         return (
-                            <CompEdu key={compEdu.id} props={compEdu} />
+                            <CompEdu key={compEdu.id} compEdu={compEdu} />
                         )
                     })}
                 </div>

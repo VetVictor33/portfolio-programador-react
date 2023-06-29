@@ -1,76 +1,48 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { StructuredText } from 'react-datocms/structured-text';
+import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import ImageComponent from '../../components/ImageComponent/ImageComponent';
-import { getKeywords, getMobileSrc, getSingleProject, requestProjects } from '../../services/database/repository';
+import { getProjectsFromStorage } from '../../services/database/repository';
 import './ProjectPage.css';
-import Loading from '../../components/Loading/Loading';
 
 export default function ProjectPage() {
-    let { projectId } = useParams();
-    const [request, setRequest] = useState(false);
+    const { projectId } = useParams();
+    const navigate = useNavigate();
 
-    let response = getSingleProject(+projectId);
+    const projects = getProjectsFromStorage();
+    if (!projects) navigate('/');
 
-    useEffect(() => { }, [request])
+    const lastProjectId = projects.length - 1;
+    const project = projects[+projectId];
+    const keywords = project.keywords.split(', ')
 
-    if (!response) {
-        async function getProjectsFromApi(param) {
-            if (param) {
-                setRequest(!request);
-                return
-            }
-            const response = await requestProjects();
-            if (!response) return
-            setRequest(!request);
-        }
-        getProjectsFromApi();
-        return (
-            <div className='LoadingProjectPage'>
-                <Loading refresh={getProjectsFromApi} />
-            </div>
-        )
-    }
+    const nextProject = +projectId < lastProjectId ? (+projectId) + 1 : 0;
+    const preveiusProject = +projectId > 0 ? (+projectId) - 1 : lastProjectId;
 
-
-    if (!response[0]) {
-        projectId = 16;
-        response = getSingleProject(projectId);
-    }
-
-    const project = response[0];
-    const projectsLength = response[1];
-
-
-    const hasMobile = project.mobile;
-    const mobileSrc = getMobileSrc(+projectId);
-    const hasDebloy = project.deploy;
-    const keywords = getKeywords(+projectId);
-
-    const preveiusProject = project.id >= (projectsLength) ? 1 : (project.id) + 1;
-    const nextProject = project.id > 1 ? (project.id) - 1 : projectsLength;
     return (
         <div className='ProjectPage'>
             {project && <>
-                <ImageComponent imgSrc={project.imgSrc} link={project.link} />
+                <ImageComponent image={project.image} link={project.githubLink} />
                 <div className='bts'>
                     <Link className='bt bt-left' to={`/project/${preveiusProject}`} preventScrollReset={true}></Link>
                     <p className='main-title'>{project.title}</p>
                     <Link className='bt bt-right' to={`/project/${nextProject}`} preventScrollReset={true}></Link>
                 </div>
                 <div className='project-keywords'>
-                    {keywords && keywords.map(keyword => {
+                    {keywords.map(keyword => {
                         return (
                             <p className='project-keyword' key={`${keyword}-${project.id}`}>{keyword}</p>
                         )
                     })}
                 </div>
-                <p className='text-description'>{project.description}</p>
-                {!!hasDebloy && <a href={hasDebloy} className='main-title' target='_blank'> Visitar o site </a>}
-                {hasMobile &&
+                <div className='description-from-cms'>
+                    <StructuredText data={project.description} />
+                </div>
+                {!!project?.deployLink && <a href={project.deployLink} className='main-title' target='_blank'> Visitar o site </a>}
+                {project.mobile &&
                     <div className='mobile'>
                         <h2>Idealizado para mobile:</h2>
-                        <ImageComponent imgSrc={mobileSrc} link={project.link} mobile={true} />
+                        <ImageComponent image={project.mobileImage} link={project.githubLink} mobile={true} />
                     </div>
                 }
             </>}

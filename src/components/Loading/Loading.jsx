@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react'
 import './Loading.css'
 import { getProjectsFromStorage, requestProjects } from '../../services/database/repository';
@@ -51,6 +52,11 @@ export default function Loading({ refresh }) {
         }
 
     }, [timeOut])
+=======
+import './Loading.css';
+
+export default function Loading({ setProjects }) {
+>>>>>>> SettingCMS
     return (
         <div className="Loading">
             <div className='bar-container'>

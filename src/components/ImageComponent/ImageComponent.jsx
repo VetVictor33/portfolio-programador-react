@@ -1,25 +1,15 @@
+import { Image } from 'react-datocms/image';
 import { arrayImgs } from '../../imports';
 import './ImageComponent.css'
 
 
-export default function ImageComponent({ imgSrc, mobile, handleNavigate, link }) {
+export default function ImageComponent({ image, handleNavigate, link }) {
     const pathname = window.location.pathname;
-    let src = arrayImgs.find(img => img.indexOf('no_image_available') !== -1);
-
-    arrayImgs.forEach((img) => {
-        if (mobile) {
-            if (img.indexOf(imgSrc) !== -1) {
-                src = img;
-            }
-        } else if (img.indexOf(imgSrc) !== -1 && img.indexOf('mobile') == -1) {
-            src = img;
-        }
-    })
 
     return (
         <div className='ImageComponent' onClick={handleNavigate}>
             <a href={link} target='_blank'>
-                <img className='card-img' src={src} alt='Projeto' />
+                <Image className="card-img" data={image.responsiveImage} />
                 {pathname !== '/' && <p className='tooltip'>GitHub</p>}
             </a>
         </div>

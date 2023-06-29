@@ -1,19 +1,11 @@
 import { getItem, setItem } from '../../utils/storage';
-import api from '../api/axios'
 
-export async function requestProjects() {
-    try {
-        const response = await api.get('/projects');
-        const { data } = response;
-
-        const dataStringfied = JSON.stringify(data.reverse());
-        setItem('projects', dataStringfied);
-        return data;
-    } catch (error) {
-        return null;
-    }
+export function setProjectosInStorage(projects) {
+    const dataStringfied = JSON.stringify(projects)
+    setItem('projects', dataStringfied)
 }
 
+<<<<<<< HEAD
 export async function requestComEdu() {
     try {
         const response = await api.get('/complementary-education');
@@ -55,3 +47,6 @@ export function getKeywords(id) {
     const keywords = project.keywords;
     return keywords
 }
+=======
+export const getProjectsFromStorage = () => JSON.parse(getItem('projects'));
+>>>>>>> SettingCMS

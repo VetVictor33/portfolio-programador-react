@@ -30,6 +30,11 @@
     font-style: italic;
 }
 
+.Projects .presentation-from-cms p {
+    font-size: 28px;
+    margin: 20px 50px
+}
+
 .Projects .projects-cards {
     width: 100%;
     height: fit-content;
@@ -63,4 +68,27 @@
         margin: 0 40px;
         margin-bottom: 40px;
     }
+<<<<<<< HEAD
+=======
+
+    .Projects .presentation-from-cms p {
+        font-size: 30px;
+        margin: 40px 100px
+    }
+
+    .Projects .Loading {
+        grid-column-start: 2;
+    }
+}
+
+@media (min-width: 1500px) {
+    .Projects .projects-cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .Projects .Loading {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+>>>>>>> SettingCMS
 }
