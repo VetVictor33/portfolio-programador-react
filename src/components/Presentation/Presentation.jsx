@@ -1,7 +1,13 @@
+import { Image } from 'react-datocms/image'
 import './Presentation.css'
-import Profile from './../../assets/perfil/perfil4.jpg'
+import { useEffect, useState } from 'react'
 
-export default function Presentation() {
+export default function Presentation({ profileImg }) {
+    const [profileImage, setProfileImage] = useState(null)
+    useEffect(() => {
+        setProfileImage(profileImg)
+    }, [profileImg])
+
     return (
         <section className="Presentation">
             <article className="preseentation-text">
@@ -10,7 +16,8 @@ export default function Presentation() {
                 <p>enxergando o mundo pelo código fonte</p>
             </article>
             <div className="presentation-img">
-                <img src={Profile} alt="" />
+                {!!profileImage &&
+                    <Image data={profileImg?.responsiveImage} />}
             </div>
         </section>
     )

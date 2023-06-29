@@ -48,6 +48,7 @@
 
 .Presentation .presentation-img {
     display: none;
+    margin-right: 100px;
 }
 
 
@@ -60,29 +61,15 @@
 
     .Presentation .presentation-img {
         display: flex;
+        max-width: 400px;
+        max-height: 400px;
         flex: 1
     }
 
     .Presentation .presentation-img img {
-        max-width: auto;
-        max-height: 25vh;
         border-radius: 50%;
         background-image: linear-gradient(to bottom right, var(--terciary-color), var(--secondary-color));
         padding: 3%;
         margin: auto
-    }
-}
-
-@media (min-width:1200px) {
-
-    .Presentation .presentation-img img {
-        max-height: 30vh;
-    }
-}
-
-@media (min-width:1600px) {
-
-    .Presentation .presentation-img img {
-        max-height: 40vh;
     }
 }

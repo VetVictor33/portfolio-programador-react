@@ -3,7 +3,7 @@ import { arrayImgs } from '../../imports';
 import './ImageComponent.css'
 
 
-export default function ImageComponent({ image, mobile, handleNavigate, link }) {
+export default function ImageComponent({ image, handleNavigate, link }) {
     const pathname = window.location.pathname;
 
     return (
