@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import ProfileImg from '../../assets/perfil/perfil.jpg';
 import SocialNavbar from '../../components/SocialNavbar/SocialNavbar';
 import './Contact.css';
@@ -9,8 +9,10 @@ export default function Contact() {
     const [email, setEmail] = useState('');
     const [subject, setSubject] = useState('');
     const [message, setMessage] = useState('');
-    const [lockedForm, setLockedForm] = useState(false);
     const [infoMessage, setInfoMessage] = useState('');
+    const [lockedForm, setLockedForm] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const sendButton = useRef(null);
 
     const handleInputChange = (e) => {
         setInfoMessage('');
@@ -31,7 +33,8 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (lockedForm) return
-        setLockedForm(true)
+        setLockedForm(true);
+        setLoading(true);
         try {
             if (!name || !email || !subject || !message) throw new Error("Form error");
             const response = await axios.post('https://message-victor.onrender.com/send-message', {
@@ -41,7 +44,7 @@ export default function Contact() {
                 message,
                 password: import.meta.env.VITE_SMTP_KEY,
             }, {
-                timeout: 10000,
+                timeout: 15000,
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -64,7 +67,8 @@ export default function Contact() {
                 setInfoMessage(message)
             }
         } finally {
-            setLockedForm(false)
+            setLockedForm(false);
+            setLoading(false);
         }
     }
 
@@ -92,12 +96,15 @@ export default function Contact() {
                         <label htmlFor="subject">Assunto</label>
                         <input type="text" name="subject" id="subject" onChange={handleInputChange} value={subject} />
                     </div>
-                    <div className='input-box'>
+                    <div className='input-box loader-div'>
                         <label htmlFor="message">Mensagem</label>
                         <textarea name="message" id="message" cols="30" rows="10" onChange={handleInputChange} value={message}></textarea>
+                        {loading && <div className='loader' />}
                     </div>
                     {infoMessage && <p>{infoMessage}</p>}
-                    <button>ENVIAR</button>
+                    <button ref={sendButton}>ENVIAR</button>
+
+
                 </form>
             </div>
             <SocialNavbar />
