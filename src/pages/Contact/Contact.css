@@ -3,88 +3,112 @@
     flex-direction: column;
     justify-content: space-around;
     min-height: 80vh;
-    padding: 1rem 0;
-}
-
-.Contact .box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgba(240, 248, 255, 0.603);
-    width: 350px;
-    height: 450px;
-
-    margin: 0 auto;
-    margin-bottom: 1rem;
-    padding: 1rem;
-
-    border-radius: 8px;
-    box-shadow: 1px 5px 6px 1px rgba(240, 248, 255, 0.301);
 }
 
 .Contact #profile {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     padding: 1px;
-    margin-top: 10%;
 
     background-color: black;
-}
-
-.Contact .text-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Contact .box p {
-    color: black;
-    margin: 0.5rem 0;
-    background-color: rgba(240, 248, 255, 0.603);
-    padding: 3px;
-    border-radius: 8px;
-
-    width: 65%;
-}
-
-
-.Contact #gmail {
-    width: 30px;
-    cursor: pointer;
 }
 
 .Contact .SocialNavbar {
     background-color: rgba(240, 248, 255, 0.603);
 }
 
-.Contact .background {
+.Contact .content-box {
+    display: flex;
+    flex-direction: column;
     background-color: rgba(0, 0, 0, 0.438);
     padding: 6rem 0;
     border-radius: 18px;
+}
+
+.Contact .presentation {
+    font-size: 22px;
+    padding: 0 10px;
+}
+
+.Contact .presentation p {
+    margin: 15px 0;
+}
+
+.Contact .form {
+    margin: 20px auto;
+    width: 98vw;
+}
+
+
+.Contact .form .input-box {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 30px;
+}
+
+.Contact .form .input-box label {
+    margin-bottom: 10px;
+}
+
+.Contact .form .input-box input,
+.Contact .form .input-box textarea {
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    min-height: 25px;
+    font-size: 20px;
+    padding: 3px 5px;
+}
+
+
+
+.Contact .form button {
+    width: 100px;
+    height: 30px;
+    color: #000;
+
+    margin: 10px 0;
+
+    border: none;
+    border-radius: 3px;
 }
 
 .Contact .SocialNavbar li {
     color: black !important;
 }
 
-@media (min-width: 800px) {
-    .Contact .box {
-        width: 450px;
-        height: 450px;
+@media (min-width: 550px) {
+    .Contact .form {
+        width: 550px;
     }
+}
 
+@media (min-width: 700px) {
     .Contact #profile {
         height: 150px;
         width: 150px;
     }
+
+    .Contact .presentation {
+        margin-top: 50px;
+    }
+
+    .Contact .content-box {
+        flex-direction: row;
+    }
+
+    .Contact .form {
+        width: 600px;
+    }
 }
 
-@media (min-width: 1200px) {
-    .Contact .box {
-        width: 600px;
-        height: 600px
+@media (min-width: 950px) {
+    .Contact .presentation {
+        width: 40%;
+    }
+
+    .Contact .form {
+        width: 60%;
     }
 }
