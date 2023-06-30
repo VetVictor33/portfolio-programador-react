@@ -5,12 +5,11 @@
     min-height: 80vh;
 }
 
-.Contact #profile {
+.Contact .profile-img img {
     height: 150px;
     width: 150px;
     border-radius: 50%;
     padding: 1px;
-
     background-color: black;
 }
 
@@ -27,6 +26,9 @@
 }
 
 .Contact .presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 22px;
     padding: 0 10px;
 }
@@ -111,7 +113,7 @@
 }
 
 @media (min-width: 700px) {
-    .Contact #profile {
+    .Contact .profile-img {
         height: 150px;
         width: 150px;
     }

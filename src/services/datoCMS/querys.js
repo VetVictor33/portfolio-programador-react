@@ -96,3 +96,28 @@ export const RESUME_INFO_QUERY = `query MyQuery {
     }
   }
 }`
+
+export const CONTACT_INFO_QUERY = `query MyQuery {
+  allSiteinfos {
+    contactProfileImage {
+      responsiveImage(fallbackLocales: en, locale: en, sizes: "") {
+        alt
+        aspectRatio
+        base64
+        bgColor
+        height
+        sizes
+        src
+        srcSet
+        title
+        webpSrcSet
+        width
+      }
+    }
+    contactMessage {
+      blocks
+      links
+      value
+    }
+  }
+}`
