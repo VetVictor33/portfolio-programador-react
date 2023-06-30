@@ -8,9 +8,9 @@ export default function ErrorPage() {
     return (
         <div className="ErrorPage">
             <h1>Oops! {'=('}</h1>
-            <p>
+            {/* <p>
                 <i>{error.statusText || error.message}</i>
-            </p>
+            </p> */}
             <p>Parece que ocorreu um erro. Que tal retornar para a <Link id='link' to={`/`}>página inicial? </Link></p>
         </div>
     );
