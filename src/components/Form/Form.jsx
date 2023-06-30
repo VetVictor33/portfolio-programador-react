@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import axios from 'axios';
+import axios from '../../services/axios/axios';
 
 export default function Form() {
     const [name, setName] = useState('');
@@ -34,17 +34,12 @@ export default function Form() {
         setLoading(true);
         try {
             if (!name || !email || !subject || !message) throw new Error("Form error");
-            const response = await axios.post('https://message-victor.onrender.com/send-message', {
+            const response = await axios.post('/send-message', {
                 name,
                 email,
                 subject,
                 message,
                 password: import.meta.env.VITE_SMTP_KEY,
-            }, {
-                timeout: 15000,
-                headers: {
-                    'Content-Type': 'application/json',
-                },
             });
             if (response.status === 200) {
                 setInfoMessage("Mensagem enviada com sucesso, obrigado! Entrarei em contato assim que possível");
