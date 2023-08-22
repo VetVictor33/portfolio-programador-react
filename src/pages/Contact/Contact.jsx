@@ -6,19 +6,15 @@ import Form from '../../components/Form/Form';
 import SocialNavbar from '../../components/SocialNavbar/SocialNavbar';
 import { CONTACT_INFO_QUERY } from '../../services/datoCMS/querys';
 import './Contact.css';
-import axios from '../../services/axios/axios';
 
 export default function Contact() {
     const { data: contactInfo } = useQuery(CONTACT_INFO_QUERY);
     const [contactProfileImage, setContactProfileImage] = useState(null);
     const [contactMessage, setContactMessage] = useState(null);
 
-    async function wakeUpSMTPServer() {
-        await axios.get('/');
-    }
+
 
     useEffect(() => {
-        wakeUpSMTPServer();
         if (contactInfo) {
             const info = contactInfo.allSiteinfos[0];
             setContactProfileImage(info.contactProfileImage);
