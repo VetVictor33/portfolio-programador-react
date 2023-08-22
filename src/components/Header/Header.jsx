@@ -53,13 +53,13 @@ export default function Header() {
                 <img className='menu' src={Menu} onClick={handleToggleShown} />
                 <ul onClick={handleRemoveMenu} ref={linksRef}>
                     <li>
-                        <NavLink to={'/'} >Home</NavLink>
+                        <NavLink to={'/'} data-testid="Home">Home</NavLink>
                     </li>
                     <li>
-                        <NavLink to={`/about`} >Sobre</NavLink>
+                        <NavLink to={`/about`} data-testid="Sobre">Sobre</NavLink>
                     </li>
                     <li>
-                        <NavLink to={`/contact`} >Contato</NavLink>
+                        <NavLink to={`/contact`} data-testid="Contato">Contato</NavLink>
                     </li>
                 </ul>
             </nav>
