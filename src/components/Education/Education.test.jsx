@@ -63,7 +63,6 @@ describe("Education", () => {
     render(<Education />)
 
     expect(mockQuery).toHaveBeenCalled()
-    screen.debug()
     expect(screen.getByText(title)).toBeInTheDocument();
     expect(screen.getByText(data)).toBeInTheDocument();
     expect(screen.getByText(descriptionValue)).toBeInTheDocument();
