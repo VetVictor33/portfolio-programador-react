@@ -12,8 +12,6 @@ export default function Contact() {
     const [contactProfileImage, setContactProfileImage] = useState(null);
     const [contactMessage, setContactMessage] = useState(null);
 
-
-
     useEffect(() => {
         if (contactInfo) {
             const info = contactInfo.allSiteinfos[0];
