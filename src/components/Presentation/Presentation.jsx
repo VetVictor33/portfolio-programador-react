@@ -1,5 +1,5 @@
 import { Image } from 'react-datocms/image'
-import './Presentation.css'
+import './Presentation.sass'
 import { useEffect, useState } from 'react'
 
 export default function Presentation({ profileImg }) {
@@ -10,7 +10,7 @@ export default function Presentation({ profileImg }) {
 
     return (
         <section className="Presentation">
-            <article className="preseentation-text">
+            <article className="presentation-text">
                 <h1>Victor Feliciano</h1>
                 <h2>programador full stack</h2>
                 <p>enxergando o mundo pelo código fonte</p>

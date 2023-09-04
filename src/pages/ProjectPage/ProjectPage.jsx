@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import ImageComponent from '../../components/ImageComponent/ImageComponent';
 import { getProjectsFromStorage } from '../../services/database/repository';
-import './ProjectPage.css';
+import './ProjectPage.sass';
 
 export default function ProjectPage() {
     const { projectId } = useParams();

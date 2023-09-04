@@ -1,8 +1,8 @@
-import './SocialNavbar.css'
 import GitHubLight from '../../assets/icons/github-ffff.png'
 import GitHubDark from '../../assets/icons/github.png'
 import LinkedInLight from '../../assets/icons/linkedin-ffff.png'
 import LinkedInDark from '../../assets/icons/linkedin.png'
+import './SocialNavbar.sass'
 
 export default function SocialNavbar() {
     const { pathname } = window.location;

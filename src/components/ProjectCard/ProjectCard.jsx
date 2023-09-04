@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import ImageComponent from '../ImageComponent/ImageComponent';
-import './ProjectCard.css';
+import './ProjectCard.sass';
 
 export default function ProjectCard({ project, index }) {
     const { id, title, image } = project;

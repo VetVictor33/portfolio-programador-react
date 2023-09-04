@@ -5,7 +5,7 @@ import { StructuredText } from 'react-datocms/structured-text';
 import Form from '../../components/Form/Form';
 import SocialNavbar from '../../components/SocialNavbar/SocialNavbar';
 import { CONTACT_INFO_QUERY } from '../../services/datoCMS/querys';
-import './Contact.css';
+import './Contact.sass';
 
 export default function Contact() {
     const { data: contactInfo } = useQuery(CONTACT_INFO_QUERY);

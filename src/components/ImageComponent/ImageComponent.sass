@@ -1,0 +1,46 @@
+.ImageComponent
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+
+.ImageComponent a
+    all: unset
+
+.ImageComponent .tooltip
+    display: none
+    position: absolute
+    top: calc(50% - 50px/2)
+    right: calc(50% - 130px/2)
+
+    width: 130px
+    height: 50px
+
+    background-color: rgba(128, 128, 128, 0.8)
+
+    border-radius: 18px
+    padding: 1rem
+    pointer-events: none
+
+.ImageComponent .card-img:hover+.tooltip
+    display: block
+
+.ImageComponent .tooltip:hover
+    display: block
+
+.ImageComponent img
+    max-height: 60vh
+    max-width: 90vw
+
+.ImageComponent img:hover
+    cursor: pointer
+    transform: scale(1.013)
+
+@media (min-width:700px)
+    .ImageComponent img
+        max-width: 80vw
+
+
+@media (min-width:1000px)
+    .ImageComponent img
+        max-width: 70vw

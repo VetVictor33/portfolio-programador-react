@@ -1,0 +1,61 @@
+@use '../../styles/colors'
+
+.Education 
+    .primary-education 
+        border-top: double 0.5vh colors.$tertiary
+    
+    .education-icon 
+        width: 5rem
+        height: 5rem
+        margin: 0
+
+    .education p 
+        letter-spacing: normal
+
+    .title-icon 
+        display: flex
+        align-items: center
+
+    .complementary 
+        padding: 2rem 0
+
+    .smaller-title 
+        font-size: 1.5rem
+
+
+    .medium-title 
+        font-size: 2rem
+        padding-left: 1rem
+
+
+    .course 
+        padding: 15px 0
+
+    .course-name 
+        font-size: 1.6rem
+        text-align: left
+        background-color: var(--text-bg-color)
+
+        padding: 0.7rem
+
+    .course-date 
+        padding-left: 1rem
+        font-size: 0.8rem
+        text-align: left
+        font-weight: bolder
+        color: rgb(97, 96, 96)
+
+    .course-description 
+        font-size: 1.2rem
+        width: 100%
+        text-align: left
+        margin: 0.5rem 0
+        padding: 1rem
+
+    article :last-child 
+        border-bottom: aliceblue 1px solid
+
+@media (min-width: 1200px) 
+
+    .Education .course-name 
+        margin-right: 0

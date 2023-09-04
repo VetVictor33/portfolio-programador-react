@@ -6,7 +6,7 @@ import { ALL_PROJECTS_QUERY } from '../../services/datoCMS/querys';
 import Loading from '../Loading/Loading';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectImg from './../../assets/icons/project.png';
-import './Projects.css';
+import './Projects.sass';
 
 export default function Projects({ presentationData }) {
     const [projects, setProjects] = useState(null);

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom';
-import './App.css';
+import './App.sass';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import axios from './services/axios/axios';

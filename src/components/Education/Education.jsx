@@ -1,10 +1,10 @@
 import { useQuery } from 'graphql-hooks'
 import { useEffect, useState } from 'react'
-import ComplEdu from '../../assets/icons/puzzle.png'
+import ComplementaryEdu from '../../assets/icons/puzzle.png'
 import PrimaryEdu from '../../assets/icons/scholarship.png'
 import { COMPLEMENTARY_EDUCATION } from '../../services/datoCMS/querys'
 import CompEdu from '../CompEdu/CompEdu'
-import './Education.css'
+import './Education.sass'
 
 export default function Education() {
     const [complementaryEducation, setComplementaryEducation] = useState(null)
@@ -13,15 +13,15 @@ export default function Education() {
 
     useEffect(() => {
         if (data) {
-            const edicationData = data.allComplementaryEducations;
-            setComplementaryEducation(edicationData);
+            const educationData = data.allComplementaryEducations;
+            setComplementaryEducation(educationData);
         }
     }, [data])
 
 
     return (
         <div className="Education">
-            <section className="primary-educaton">
+            <section className="primary-education">
                 <div className="title-icon">
                     <img className="icon education-icon" src={PrimaryEdu} />
                     <h2 className="main-title medium-title">Educação</h2>
@@ -45,7 +45,7 @@ export default function Education() {
             </section>
             <section className="complementary education">
                 <div className="title-icon">
-                    <img className="icon education-icon" src={ComplEdu} />
+                    <img className="icon education-icon" src={ComplementaryEdu} />
                     <h2 className="main-title smaller-title">Cursos Complementares</h2>
                 </div>
                 <div className="CompEdu">

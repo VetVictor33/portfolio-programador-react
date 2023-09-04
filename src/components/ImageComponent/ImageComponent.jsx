@@ -1,5 +1,5 @@
 import { Image } from 'react-datocms/image';
-import './ImageComponent.css'
+import './ImageComponent.sass'
 
 
 export default function ImageComponent({ image, handleNavigate, link }) {

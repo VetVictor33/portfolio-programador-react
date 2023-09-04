@@ -1,0 +1,94 @@
+@use'../../styles/imgs'
+@use'../../styles/colors'
+@import '../../styles/mixins'
+    
+.ProjectPage
+    padding: 1rem
+    min-height: 80vh
+
+.ProjectPage p
+    margin: 1rem 0
+
+.ProjectPage .bts
+    @include flexbox(space-around)
+    width: 100%
+
+.ProjectPage .bt
+    background-repeat: no-repeat
+    background-size: cover
+    width: 30px
+    height: 30px
+    margin: 30px 0
+
+.ProjectPage .bt-right
+    background-image: imgs.$arrow
+
+.ProjectPage .bt-left
+    background-image: imgs.$arrow
+    transform: rotate(180deg)
+
+.ProjectPage .main-title
+    text-align: center
+    font-size: 32px
+
+.ProjectPage .project-keywords
+    @include flexbox(center, $gap: 13px)
+    flex-wrap: wrap
+
+.ProjectPage .project-keyword
+    font-size: 22px
+    font-style: italic
+    color: lightgreen
+
+.ProjectPage .mobile
+    background-color: colors.$secondary
+    padding: 50px 0
+    margin-top: 5%
+    border-radius: 18px
+
+.ProjectPage .mobile h2
+    font-size: 36px
+    letter-spacing: 2px
+
+.ProjectPage .mobile img
+    margin: 30px 0
+    border-radius: 8px
+    box-shadow: 10px 10px 20px 10px colors.$primary
+
+.ProjectPage .description-from-cms p
+    font-size: 25px
+    margin: 20px 5px
+
+@media (min-width:700px)
+    .ProjectPage .bt
+        width: 50px
+        height: 50px
+        margin: 30px 0
+
+
+    .ProjectPage .main-title
+        font-size: 44px
+
+
+    .LoadingProjectPage .Loading .bar-container
+        width: 80vw
+
+
+@media (min-width:1300px)
+    .ProjectPage .description-from-cms p
+        font-size: 28px
+        margin: 40px 15px
+
+
+@media (min-width:1800px)
+    .ProjectPage .description-from-cms p
+        margin: 40px 100px
+
+
+    .LoadingProjectPage .Loading .bar-container
+        width: 70vw
+
+
+@media (min-width:1300px)
+    .LoadingProjectPage .Loading .bar-container
+        width: 60vw

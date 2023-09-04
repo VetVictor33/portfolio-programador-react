@@ -1,14 +1,13 @@
-import './Resume.css'
-import TextImg from '../../assets/icons/coding.png'
-import Search from '../../assets/icons/search.png'
-import Html from '../../assets/icons/html-5.png'
-import Css from '../../assets/icons/css-3.png'
-import Js from '../../assets/icons/js.png'
-import { RESUME_INFO_QUERY } from '../../services/datoCMS/querys';
 import { useQuery } from 'graphql-hooks'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { StructuredText } from 'react-datocms/structured-text'
-import { useEffect } from 'react'
+import TextImg from '../../assets/icons/coding.png'
+import Css from '../../assets/icons/css-3.png'
+import Html from '../../assets/icons/html-5.png'
+import Js from '../../assets/icons/js.png'
+import Search from '../../assets/icons/search.png'
+import { RESUME_INFO_QUERY } from '../../services/datoCMS/querys'
+import './Resume.sass'
 
 
 export default function Resume() {

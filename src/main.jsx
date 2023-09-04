@@ -11,7 +11,7 @@ import Contact from './pages/Contact/Contact';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Home from './pages/Home/Home';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
-import './styles/index.modules.scss';
+import './styles/index.modules.sass';
 
 const client = new GraphQLClient({
   url: "https://graphql.datocms.com/",

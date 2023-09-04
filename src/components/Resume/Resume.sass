@@ -1,0 +1,65 @@
+@import '../../styles/mixins'
+
+.Resume
+    @include flexbox(center, column, center)
+
+    .main-title
+        margin-bottom: 10px
+
+    .text-description
+        margin: 10px 0
+        padding: 0 2vw
+        font-size: 18px
+        letter-spacing: 5px
+        line-height: 40px
+        width: 100%
+
+    .icons
+        display: flex
+        flex-direction: row
+
+    .icon-glass
+        width: 10rem
+        height: 10rem
+
+    .icon-small
+        width: 5rem
+        height: 5rem
+        margin: 1rem
+
+    .about-img
+        display: none
+    
+    .first-paragraph-from-cms p,
+    .second-paragraph-from-cms p
+        font-size: 25px
+        margin: 20px 3px
+
+@media (min-width: 1200px)
+
+    .Resume .text-with-icon img
+        display: block
+
+
+    .Resume .first-paragraph-from-cms p,
+    .Resume .second-paragraph-from-cms p
+        font-size: 30px
+        margin: 20px 100px
+
+
+    .Resume .text-with-icon img
+        height: auto
+        width: 300px
+        float: right
+
+
+    .Resume .about-img
+        display: block
+        height: 100%
+
+
+@media (min-width: 1600px)
+
+    .Resume .first-paragraph-from-cms p,
+    .Resume .second-paragraph-from-cms p
+        margin: 20px 300px

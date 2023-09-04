@@ -1,5 +1,5 @@
 import { StructuredText } from "react-datocms/structured-text";
-import './CompEdu.scss'
+import './CompEdu.sass'
 
 export default function CompEdu({ compEdu }) {
     const { title, data, description } = compEdu;

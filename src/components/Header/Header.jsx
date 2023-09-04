@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import ProgrammerIcon from '../../assets/icons/header-icon.png';
 import Menu from '../../assets/icons/menu.svg';
-import './Header.scss';
+import './Header.sass';
 
 export default function Header() {
     const [windowSize, setWindowSize] = useState({
@@ -14,7 +14,7 @@ export default function Header() {
     const linksRef = useRef(null);
 
     useEffect(() => {
-        const handeScroll = () => {
+        const handleScroll = () => {
             if (window.scrollY > 0) {
                 headerRef.current.style.backgroundImage = 'linear-gradient(to bottom right, #001848, #301860)';
             } else {
@@ -30,11 +30,11 @@ export default function Header() {
             if (windowSize.width < 1200) handleRemoveMenu()
         }
 
-        window.addEventListener('scroll', handeScroll)
+        window.addEventListener('scroll', handleScroll)
         window.addEventListener('resize', handleResize)
 
         return () => {
-            window.removeEventListener('scroll', handeScroll);
+            window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('resize', handleResize)
         };
     }, []);

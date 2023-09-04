@@ -1,0 +1,29 @@
+@use '../../styles/colors'
+@import '../../styles/mixins'
+    
+.SocialNavbar
+    @include flexbox(center)
+    height: 10vh
+
+    border-bottom: solid colors.$tertiary 1px
+    border-top: solid colors.$tertiary 1px
+
+.SocialNavbar ul
+    @include flexbox(center)
+    gap: 30px
+
+.SocialNavbar li
+    @include flexbox(center)
+    letter-spacing: 1px
+
+.SocialNavbar .icon-link
+    height: 20px
+    width: auto
+    margin: auto 0
+    margin-right: 5px
+
+@media (min-width: 1200px)
+
+    .SocialNavbar .icon-link
+        height: 30px
+        width: 30px
