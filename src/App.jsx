@@ -5,9 +5,6 @@ import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
 import axios from './services/axios/axios';
 
-
-
-
 function App() {
   const location = useLocation()
 
