@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import ProgrammerIcon from '../../assets/icons/header-icon.png';
 import Menu from '../../assets/icons/menu.svg';
-import './Header.css';
+import './Header.scss';
 
 export default function Header() {
     const [windowSize, setWindowSize] = useState({
