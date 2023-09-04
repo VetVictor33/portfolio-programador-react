@@ -5,6 +5,8 @@ import ImageComponent from '../../components/ImageComponent/ImageComponent';
 import { getProjectsFromStorage } from '../../services/database/repository';
 import './ProjectPage.sass';
 
+import Arrow from '../../assets/icons/arrow.svg'
+
 export default function ProjectPage() {
     const { projectId } = useParams();
     const navigate = useNavigate();
@@ -17,16 +19,20 @@ export default function ProjectPage() {
     const keywords = project.keywords.split(', ')
 
     const nextProject = +projectId < lastProjectId ? (+projectId) + 1 : 0;
-    const preveiusProject = +projectId > 0 ? (+projectId) - 1 : lastProjectId;
+    const previousProject = +projectId > 0 ? (+projectId) - 1 : lastProjectId;
 
     return (
         <div className='ProjectPage'>
             {project && <>
                 <ImageComponent image={project.image} link={project.githubLink} />
                 <div className='bts'>
-                    <Link className='bt bt-left' to={`/project/${preveiusProject}`} preventScrollReset={true}></Link>
+                    <Link className='bt bt-left' to={`/project/${previousProject}`} preventScrollReset={true}
+                        style={{ backgroundImage: `url(${Arrow})` }}
+                    ></Link>
                     <p className='main-title'>{project.title}</p>
-                    <Link className='bt bt-right' to={`/project/${nextProject}`} preventScrollReset={true}></Link>
+                    <Link className='bt bt-right' to={`/project/${nextProject}`} preventScrollReset={true}
+                        style={{ backgroundImage: `url(${Arrow})` }}
+                    ></Link>
                 </div>
                 <div className='project-keywords'>
                     {keywords.map(keyword => {
