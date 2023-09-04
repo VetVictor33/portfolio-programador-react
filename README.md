@@ -14,7 +14,7 @@ Os dados dos projetos são carregados utilizando uma ferramenta de CMS
 
 ## Home
 
-Faço uma breve apresentação sobre mim e exponho meus principais projetos desenvolvidos em JavaScript, HTML, CSS, React e Node nos cards que linkam para uma página na qual apresento maiores tetalhes sobre cada um desses projetos.
+Faço uma breve apresentação sobre mim e exponho meus principais projetos desenvolvidos em JavaScript, HTML, SASS, React e Node nos cards que linkam para uma página na qual apresento maiores tetalhes sobre cada um desses projetos.
 
 ### Mobile
 
@@ -82,13 +82,15 @@ Utilizei React com o construtor Vite
 
 ### CSS
 
-Separação dos estilos em arquivos CSS diferentes;
+Separação dos estilos em arquivos diferentes;
 
 Reaproveitamento de código pelo uso de classes;
 
-Media queries para resposividade;
+Media queries para responsividade;
 
-Flexbox e Grid para maior resposividade e melhor disposição dos elemnetos no corpo do arquivo.
+Flexbox e Grid para maior responsividade e melhor disposição dos elementos no corpo do arquivo.
+
+Utilização do pre-processador SASS
 
 ### JavaScript
 
