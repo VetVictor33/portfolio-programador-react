@@ -1,5 +1,5 @@
 import { ClientContext, GraphQLClient } from 'graphql-hooks';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   RouterProvider,
@@ -23,7 +23,7 @@ const client = new GraphQLClient({
 
 const router = createBrowserRouter([
   {
-    element: <App /> as ReactNode,
+    element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
