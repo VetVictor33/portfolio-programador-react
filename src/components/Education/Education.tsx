@@ -5,11 +5,12 @@ import PrimaryEdu from '../../assets/icons/scholarship.png'
 import { COMPLEMENTARY_EDUCATION } from '../../services/datoCMS/querys'
 import CompEdu from '../CompEdu/CompEdu'
 import './Education.sass'
+import { ComplementaryEducation, ComplementaryEducationQuery } from '../../@types/types'
 
 export default function Education() {
-    const [complementaryEducation, setComplementaryEducation] = useState(null)
+    const [complementaryEducation, setComplementaryEducation] = useState<ComplementaryEducation[]>([])
 
-    const { data } = useQuery(COMPLEMENTARY_EDUCATION);
+    const { data } = useQuery<ComplementaryEducationQuery>(COMPLEMENTARY_EDUCATION);
 
     useEffect(() => {
         if (data) {

@@ -1,8 +1,12 @@
-import { Image } from 'react-datocms/image'
+import { Image, ResponsiveImageType } from 'react-datocms/image'
 import './Presentation.sass'
 import { useEffect, useState } from 'react'
 
-export default function Presentation({ profileImg }) {
+type Props = {
+    profileImg: { responsiveImage: ResponsiveImageType }
+}
+
+export default function Presentation({ profileImg }: Props) {
     const [profileImage, setProfileImage] = useState(null)
     useEffect(() => {
         setProfileImage(profileImg)

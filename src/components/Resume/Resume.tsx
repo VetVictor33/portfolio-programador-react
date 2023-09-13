@@ -8,12 +8,13 @@ import Js from '../../assets/icons/js.png'
 import Search from '../../assets/icons/search.png'
 import { RESUME_INFO_QUERY } from '../../services/datoCMS/querys'
 import './Resume.sass'
+import { ResumeInfoQuery, StructuredTextType } from '../../@types/types'
 
 
 export default function Resume() {
-    const { data: resumeInfo } = useQuery(RESUME_INFO_QUERY);
-    const [firstParagraph, setFirstParagraph] = useState(null);
-    const [secondParagraph, setSecondParagraph] = useState(null);
+    const { data: resumeInfo } = useQuery<ResumeInfoQuery>(RESUME_INFO_QUERY);
+    const [firstParagraph, setFirstParagraph] = useState<StructuredTextType>(null!);
+    const [secondParagraph, setSecondParagraph] = useState<StructuredTextType>(null!);
 
     useEffect(() => {
         if (resumeInfo) {

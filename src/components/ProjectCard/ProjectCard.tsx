@@ -1,8 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import ImageComponent from '../ImageComponent/ImageComponent';
 import './ProjectCard.sass';
+import { Project } from '../../@types/types';
 
-export default function ProjectCard({ project, index }) {
+type Props = {
+    project: Project,
+    index: number
+}
+
+export default function ProjectCard({ project, index }: Props) {
     const { id, title, image } = project;
     const keywords = (project.keywords).split(',');
     const navigate = useNavigate();

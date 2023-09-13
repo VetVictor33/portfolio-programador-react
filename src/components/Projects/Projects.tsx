@@ -1,22 +1,27 @@
 import { useQuery } from 'graphql-hooks';
 import { useEffect, useState } from 'react';
 import { StructuredText } from 'react-datocms/structured-text';
-import { getProjectsFromStorage, setProjectosInStorage } from '../../services/database/repository';
+import { Project, StructuredTextType } from '../../@types/types';
+import { getProjectsFromStorage, setProjectsInStorage } from '../../services/database/repository';
 import { ALL_PROJECTS_QUERY } from '../../services/datoCMS/querys';
 import Loading from '../Loading/Loading';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import ProjectImg from './../../assets/icons/project.png';
 import './Projects.sass';
 
-export default function Projects({ presentationData }) {
-    const [projects, setProjects] = useState(null);
-    const [presentation, setPresentation] = useState(null);
+type Props = {
+    presentationData: StructuredTextType
+}
+
+export default function Projects({ presentationData }: Props) {
+    const [projects, setProjects] = useState<Project[]>(null!);
+    const [presentation, setPresentation] = useState<StructuredTextType>(null!);
     const { data: projectData } = useQuery(ALL_PROJECTS_QUERY);
 
     useEffect(() => {
         if (projectData) {
             const projectsData = projectData.allProjects;
-            setProjectosInStorage(projectsData);
+            setProjectsInStorage(projectsData);
             setProjects(getProjectsFromStorage());
         }
         setPresentation(presentationData)
@@ -34,7 +39,7 @@ export default function Projects({ presentationData }) {
             </article>
             <div className="projects-cards">
                 {!!projects ?
-                    projects?.map((project) => {
+                    projects.map((project) => {
                         return (
                             <ProjectCard key={project.id} project={project} index={projects.indexOf(project)} />
                         )

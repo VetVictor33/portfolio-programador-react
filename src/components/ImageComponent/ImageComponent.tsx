@@ -1,8 +1,14 @@
-import { Image } from 'react-datocms/image';
+import { Image, ResponsiveImageType } from 'react-datocms/image';
 import './ImageComponent.sass'
 
 
-export default function ImageComponent({ image, handleNavigate, link }) {
+type Props = {
+    image: { responsiveImage: ResponsiveImageType },
+    handleNavigate: () => void,
+    link: string
+}
+
+export default function ImageComponent({ image, handleNavigate, link }: Props) {
     const pathname = window.location.pathname;
 
     return (

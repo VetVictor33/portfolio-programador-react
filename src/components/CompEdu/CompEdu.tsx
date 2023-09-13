@@ -1,7 +1,12 @@
 import { StructuredText } from "react-datocms/structured-text";
 import './CompEdu.sass'
+import { ComplementaryEducation } from "../../@types/types";
 
-export default function CompEdu({ compEdu }) {
+type Props = {
+    compEdu: ComplementaryEducation
+}
+
+export default function CompEdu({ compEdu }: Props) {
     const { title, data, description } = compEdu;
     return (
         <article className="CompEdu">
