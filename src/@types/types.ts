@@ -38,10 +38,10 @@ export type ComplementaryEducation = {
 }
 
 export type HomeInfoQuery = {
-  allSiteinfos: {
-    homeProfileImg: ResponsiveImageType
-  },
-  presentation: StructuredTextType
+  allSiteinfos: [{
+    homeProfileImg: { responsiveImage: ResponsiveImageType }
+    presentation: StructuredTextType,
+  }]
 }
 
 export type ResumeInfoQuery = {
@@ -52,8 +52,8 @@ export type ResumeInfoQuery = {
 }
 
 export type ContactInfoQuery = {
-  allSiteinfos: {
-    contactProfileImage: ResponsiveImageType
-  }
-  contactMessage: StructuredTextType
+  allSiteinfos: [{
+    contactProfileImage: { responsiveImage: ResponsiveImageType },
+    contactMessage: StructuredTextType
+  }]
 }

@@ -1,18 +1,19 @@
 import { StructuredText } from 'react-datocms/structured-text';
-import { useNavigate, useParams } from 'react-router';
+import { Navigate, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import ImageComponent from '../../components/ImageComponent/ImageComponent';
 import { getProjectsFromStorage } from '../../services/database/repository';
 import './ProjectPage.sass';
 
-import Arrow from '../../assets/icons/arrow.svg'
+import Arrow from '../../assets/icons/arrow.svg';
 
 export default function ProjectPage() {
     const { projectId } = useParams();
-    const navigate = useNavigate();
 
     const projects = getProjectsFromStorage();
-    if (!projects) navigate('/');
+    if (!projects || !projectId) {
+        return <Navigate to={'/'} />
+    }
 
     const lastProjectId = projects.length - 1;
     const project = projects[+projectId];

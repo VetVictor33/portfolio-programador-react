@@ -6,4 +6,4 @@ export function setProjectsInStorage(projects: Project) {
     setItem('projects', dataStringfied)
 }
 
-export const getProjectsFromStorage = () => JSON.parse(getItem('projects')!);
+export const getProjectsFromStorage = (): Project[] => JSON.parse(getItem('projects')!);
