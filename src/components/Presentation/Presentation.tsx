@@ -3,11 +3,11 @@ import './Presentation.sass'
 import { useEffect, useState } from 'react'
 
 type Props = {
-    profileImg: { responsiveImage: ResponsiveImageType }
+    profileImg: ResponsiveImageType
 }
 
 export default function Presentation({ profileImg }: Props) {
-    const [profileImage, setProfileImage] = useState(null)
+    const [profileImage, setProfileImage] = useState<ResponsiveImageType>(null!)
     useEffect(() => {
         setProfileImage(profileImg)
     }, [profileImg])
@@ -21,7 +21,7 @@ export default function Presentation({ profileImg }: Props) {
             </article>
             <div className="presentation-img">
                 {!!profileImage &&
-                    <Image data={profileImg?.responsiveImage} />}
+                    <Image data={profileImg} />}
             </div>
         </section>
     )
