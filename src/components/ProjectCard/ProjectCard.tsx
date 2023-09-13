@@ -20,7 +20,7 @@ export default function ProjectCard({ project, index }: Props) {
     return (
         <div className='ProjectCard'>
             <div>
-                <ImageComponent image={image} keywords={project.keywords} handleNavigate={handleNavigate} />
+                <ImageComponent image={image.responsiveImage} handleNavigate={handleNavigate} />
                 <h2 onClick={handleNavigate}>{title}</h2>
             </div>
             <div className='card-keywords'>

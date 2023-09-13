@@ -10,7 +10,7 @@ describe("Footer", () => {
     expect(screen.getByText(name)).toBeInTheDocument()
   })
   it("should render current year", () => {
-    const year = new RegExp(new Date().getFullYear())
+    const year = new RegExp(String(new Date().getFullYear()))
 
     render(<Footer />)
 

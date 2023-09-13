@@ -1,5 +1,6 @@
-import { useRef, useState } from 'react';
+import { ChangeEvent, FormEvent, FormEventHandler, useRef, useState } from 'react';
 import axios from '../../services/axios/axios';
+import FormError from '../../errors/FormError';
 
 export default function Form() {
     const [name, setName] = useState('');
@@ -11,7 +12,7 @@ export default function Form() {
     const [loading, setLoading] = useState(false);
     const sendButton = useRef(null);
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setInfoMessage('');
         const name = e.target.name;
         const value = e.target.value;
@@ -27,13 +28,13 @@ export default function Form() {
         }
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (lockedForm) return
         setLockedForm(true);
         setLoading(true);
         try {
-            if (!name || !email || !subject || !message) throw new Error("Form error");
+            if (!name || !email || !subject || !message) throw new FormError("Form error");
             const response = await axios.post('/send-message', {
                 name,
                 email,
@@ -47,9 +48,8 @@ export default function Form() {
                 setMessage('');
             }
             console.log(response)
-        } catch (error) {
-            console.log(error)
-            if (error.message === "Form error") {
+        } catch (error: FormError | any) {
+            if (error instanceof FormError) {
                 let message = 'Preencha:';
                 if (!name) message += ' nome,';
                 if (!email) message += ' email,';
@@ -79,7 +79,7 @@ export default function Form() {
             </div>
             <div className='input-box loader-div'>
                 <label htmlFor="message">Mensagem</label>
-                <textarea name="message" id="message" cols="30" rows="10" onChange={handleInputChange} value={message}></textarea>
+                <textarea name="message" id="message" cols={30} rows={10} onChange={handleInputChange} value={message}></textarea>
                 {loading && <div className='loader' />}
             </div>
             {infoMessage && <p>{infoMessage}</p>}

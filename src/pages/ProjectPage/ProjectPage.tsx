@@ -25,7 +25,7 @@ export default function ProjectPage() {
     return (
         <div className='ProjectPage'>
             {project && <>
-                <ImageComponent image={project.image} link={project.githubLink} />
+                <ImageComponent image={project.image.responsiveImage} link={project.githubLink} />
                 <div className='bts'>
                     <Link className='bt bt-left' to={`/project/${previousProject}`} preventScrollReset={true}
                         style={{ backgroundImage: `url(${Arrow})` }}
@@ -49,7 +49,7 @@ export default function ProjectPage() {
                 {project.mobile &&
                     <div className='mobile'>
                         <h2>Idealizado para mobile:</h2>
-                        <ImageComponent image={project.mobileImage} link={project.githubLink} mobile={true} />
+                        <ImageComponent image={project.mobileImage.responsiveImage} link={project.githubLink} />
                     </div>
                 }
             </>}

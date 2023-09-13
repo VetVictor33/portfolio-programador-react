@@ -10,8 +10,8 @@ export default function Header() {
         height: window.innerHeight,
     });
 
-    const headerRef = useRef(null);
-    const linksRef = useRef(null);
+    const headerRef = useRef<HTMLElement>(null!);
+    const linksRef = useRef<HTMLUListElement>(null!);
 
     useEffect(() => {
         const handleScroll = () => {

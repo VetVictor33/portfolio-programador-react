@@ -1,25 +1,22 @@
+import { StructuredText } from "datocms-structured-text-utils"
 import { ResponsiveImageType } from "react-datocms/image"
 
 export type AllProjectsQuery = {
   allProjects: Project[]
 }
 
-export type StructuredTextType = {
-  blocks?: any,
-  links?: any,
-  value?: any,
-}
+export type StructuredTextType = StructuredText
 
 export type Project = {
   id: number,
   title: string,
   mobile: boolean,
-  image: ResponsiveImageType
+  image: { responsiveImage: ResponsiveImageType }
   keywords: string,
-  mobileImage: ResponsiveImageType
+  mobileImage: { responsiveImage: ResponsiveImageType }
   githubLink: string,
   deployLink: string
-  description: StructuredTextType
+  description: StructuredText
 }
 
 export type ComplementaryEducationQuery = {
@@ -30,30 +27,26 @@ export type ComplementaryEducation = {
   id: number,
   title: string,
   data: string,
-  description: {
-    blocks?: any,
-    links?: any,
-    value?: any,
-  }
+  description: StructuredText
 }
 
 export type HomeInfoQuery = {
   allSiteinfos: [{
     homeProfileImg: { responsiveImage: ResponsiveImageType }
-    presentation: StructuredTextType,
+    presentation: StructuredText,
   }]
 }
 
 export type ResumeInfoQuery = {
   allSiteinfos: [{
-    aboutFirstParagraph: StructuredTextType
-    aboutSecondParagraph: StructuredTextType
+    aboutFirstParagraph: StructuredText
+    aboutSecondParagraph: StructuredText
   }]
 }
 
 export type ContactInfoQuery = {
   allSiteinfos: [{
     contactProfileImage: { responsiveImage: ResponsiveImageType },
-    contactMessage: StructuredTextType
+    contactMessage: StructuredText
   }]
 }

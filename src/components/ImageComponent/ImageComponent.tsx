@@ -3,9 +3,9 @@ import './ImageComponent.sass'
 
 
 type Props = {
-    image: { responsiveImage: ResponsiveImageType },
-    handleNavigate: () => void,
-    link: string
+    image: ResponsiveImageType,
+    handleNavigate?: () => void,
+    link?: string
 }
 
 export default function ImageComponent({ image, handleNavigate, link }: Props) {
@@ -14,7 +14,7 @@ export default function ImageComponent({ image, handleNavigate, link }: Props) {
     return (
         <div className='ImageComponent' onClick={handleNavigate}>
             <a href={link} target='_blank'>
-                <Image className="card-img" data={image.responsiveImage} />
+                <Image className="card-img" data={image} />
                 {pathname !== '/' && <p className='tooltip'>GitHub</p>}
             </a>
         </div>
