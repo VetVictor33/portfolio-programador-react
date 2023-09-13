@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import { faker } from "@faker-js/faker"
 import '@testing-library/jest-dom'
-import Education from './Education.jsx';
+import Education from './Education.tsx';
 
 const mockQuery = jest.fn()
 

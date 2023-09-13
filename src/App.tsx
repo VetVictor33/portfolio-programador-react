@@ -17,7 +17,7 @@ function App() {
   }, [location])
 
   return (
-    <div className="App">
+    <div className="App" >
       <Header />
       <Outlet />
       <Footer />

@@ -1,12 +1,12 @@
 import { ClientContext, GraphQLClient } from 'graphql-hooks';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
 import App from './App';
-import About from './pages/About/About';
+import About from './pages/About/About.tsx';
 import Contact from './pages/Contact/Contact';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import Home from './pages/Home/Home';
@@ -23,7 +23,7 @@ const client = new GraphQLClient({
 
 const router = createBrowserRouter([
   {
-    element: <App />,
+    element: <App /> as ReactNode,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
   }
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ClientContext.Provider value={client}>
       <RouterProvider router={router} />
