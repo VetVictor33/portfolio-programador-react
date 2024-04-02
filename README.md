@@ -15,5 +15,5 @@ Link do deploy : https://victor-feliciano.onrender.com/
 
 ## Como melhorar este projeto
 
-Fazer uma varredura e melhorar o código de maneira geral;
-Aumentar a cobertura dos tests;
+- Fazer uma varredura e melhorar o código de maneira geral
+- Aumentar a cobertura dos tests;
